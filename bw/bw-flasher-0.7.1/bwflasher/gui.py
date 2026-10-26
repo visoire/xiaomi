@@ -1,0 +1,895 @@
+#!/usr/bin/env python3
+#! -*- coding: utf-8 -*-
+#
+# BW Flasher
+# Copyright (C) 2024-2025 ScooterTeam
+#
+# This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+# To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/
+# or send a letter to Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+#
+# You are free to:
+# - Share — copy and redistribute the material in any medium or format
+# - Adapt — remix, transform, and build upon the material
+#
+# Under the following terms:
+# - Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were made.
+# - NonCommercial — You may not use the material for commercial purposes.
+# - ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under the same license as the original.
+#
+
+import serial.tools.list_ports
+import sys
+import os
+import platform
+import webbrowser
+import requests
+
+from serial.serialutil import SerialException
+from PySide6.QtWidgets import (
+    QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton,
+    QProgressBar, QFileDialog, QCheckBox, QTextEdit, QStatusBar, QComboBox, QMessageBox,
+    QTabWidget,
+)
+from PySide6.QtGui import (
+    QPalette, QIcon, QColor, QCursor, QPainter, QFont, QRadialGradient,
+    QPixmap, QGuiApplication,
+)
+from PySide6.QtCore import Qt, QThread, Signal, QTimer
+
+from bwflasher.flash_uart import DFU, FlasherException
+from bwflasher.updater import check_update, get_name
+from bwflasher.styles import DARK_THEME_STYLESHEET, FIRMWARE_TYPE_STYLES
+from bwflasher.version import __version__
+from bwflasher.base_flasher import detect_firmware_file, create_flasher_for_firmware, get_firmware_info, FirmwareType
+from bwflasher.music_player import ChiptunePlayer
+from bwflasher.serial_number import (
+    SERIAL_NUMBER_LENGTH,
+    send_serial_command,
+    validate_serial_number,
+)
+
+SERIAL_PREFIX_LENGTH = 5
+SERIAL_SUFFIX_LENGTH = 14
+SERIAL_PREFIX_EXAMPLE = "05393"
+SERIAL_SUFFIX_EXAMPLE = "70000000ABCDEF"
+
+OS = platform.system()
+
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and for PyInstaller """
+    try:
+        # PyInstaller creates a temp folder and stores path in _MEIPASS
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(".")
+
+    return os.path.join(base_path, "resources", relative_path)
+
+
+def get_serial_ports():
+    ports = serial.tools.list_ports.comports()
+    if OS == "Windows":
+        return [port[0] for port in ports] if ports else []
+    else:
+        prefix = "/dev/ttyUSB" if OS == "Linux" else "/dev/cu.usbserial"
+        return [port[0] for port in ports if port[0].startswith(prefix)] if ports else []
+
+
+class BaseThread(QThread):
+    progress_signal = Signal(int)
+    status_signal = Signal(str)
+    debug_signal = Signal(str)
+    exception_signal = Signal(list)
+
+    def __init__(self, com_port, firmware_file, simulation, debug, firmware_type=None, parent=None):
+        super().__init__(parent)
+        self.com_port = com_port
+        self.firmware_file = firmware_file
+        self.simulation = simulation
+        self.debug = debug
+        self.firmware_type = firmware_type
+
+    def update_progress(self, value):
+        self.progress_signal.emit(value)
+
+    def log_debug(self, message):
+        self.debug_signal.emit(message)
+
+    def show_status(self, message):
+        self.status_signal.emit(message)
+
+
+class FirmwareUpdateThread(BaseThread):
+    def __init__(self, com_port, firmware_file, simulation, debug, firmware_type=None, parent=None):
+        super().__init__(com_port, firmware_file, simulation, debug, firmware_type, parent)
+
+    def run(self):
+        try:
+            # Auto-detect firmware type if not specified
+            if self.firmware_type is None:
+                self.firmware_type = detect_firmware_file(self.firmware_file)
+
+            # Create appropriate flasher
+            updater = create_flasher_for_firmware(
+                self.firmware_file,
+                tty_port=self.com_port,
+                simulation=self.simulation,
+                debug=self.debug,
+                status_callback=self.show_status,
+                log_callback=self.log_debug,
+                progress_callback=self.update_progress,
+            )
+            updater.load_file(self.firmware_file)
+            updater.run()
+        except FlasherException as e:
+            self.exception_signal.emit(["Flasher", str(e)])
+        except SerialException:
+            self.exception_signal.emit(["Serial", "The serial connection caused an error. Is your adapter connected?"])
+        except Exception as e:
+            self.exception_signal.emit(["Unknown", str(e)])
+
+
+class TestConnectionThread(BaseThread):
+    def __init__(self, com_port, firmware_file, simulation, debug, firmware_type=None, parent=None):
+        super().__init__(com_port, firmware_file, simulation, debug, firmware_type, parent)
+
+    def run(self):
+        try:
+            # Auto-detect firmware type if firmware file is provided
+            if self.firmware_file and self.firmware_type is None:
+                self.firmware_type = detect_firmware_file(self.firmware_file)
+
+            # Create appropriate flasher or default to Brightway
+            if self.firmware_file:
+                updater = create_flasher_for_firmware(
+                    self.firmware_file,
+                    tty_port=self.com_port,
+                    simulation=self.simulation,
+                    debug=self.debug,
+                    status_callback=self.show_status,
+                    log_callback=self.log_debug,
+                    progress_callback=self.update_progress,
+                )
+            else:
+                # No firmware file - use default Brightway flasher
+                updater = DFU(
+                    tty_port=self.com_port,
+                    simulation=self.simulation,
+                    debug=self.debug,
+                    status_callback=self.show_status,
+                    log_callback=self.log_debug,
+                    progress_callback=self.update_progress,
+                )
+            updater.test_connection()
+        except SerialException:
+            self.exception_signal.emit(["Serial", "The serial connection caused an error. Is your adapter connected?"])
+        except Exception as e:
+            self.exception_signal.emit(["Unknown", str(e)])
+
+
+class SetSerialNumberThread(QThread):
+    """Set LEQI scooter serial number (stored in dashboard BLE NVM)."""
+
+    progress_signal = Signal(int)
+    status_signal = Signal(str)
+    debug_signal = Signal(str)
+    exception_signal = Signal(list)
+
+    def __init__(self, com_port, serial_number, simulation, debug, parent=None):
+        super().__init__(parent)
+        self.com_port = com_port
+        self.serial_number = serial_number
+        self.simulation = simulation
+        self.debug = debug
+
+    def run(self):
+        try:
+            mode = " (simulation)" if self.simulation else ""
+            self.status_signal.emit(f"Setting scooter serial to {self.serial_number}{mode}...")
+
+            # Always log TX/RX details for set-serial so simulation is visible
+            # without requiring the Debug checkbox (same idea as flasher simulation).
+            def log(message):
+                self.debug_signal.emit(message)
+
+            success, resp_serial, message = send_serial_command(
+                port=self.com_port,
+                serial_number=self.serial_number,
+                debug_callback=log,
+                simulation=self.simulation,
+            )
+            if success:
+                suffix = " (simulated)" if self.simulation else ""
+                self.status_signal.emit(f"Scooter serial set to '{resp_serial}'{suffix}")
+                self.progress_signal.emit(100)
+            else:
+                self.exception_signal.emit(["Serial Number", message])
+        except Exception as e:
+            self.exception_signal.emit(["Unknown", str(e)])
+
+
+class CRTScanlineWidget(QWidget):
+    """Static CRT glass overlay — no timer, paints only on resize."""
+
+    def __init__(self, parent=None):
+        super().__init__(parent)
+        self.setAttribute(Qt.WA_TransparentForMouseEvents)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+        self._layer = None
+        self._cache_size = None
+
+    def set_paused(self, paused: bool):
+        """Kept for API compatibility; static overlay has nothing to pause."""
+        return
+
+    def resizeEvent(self, event):
+        super().resizeEvent(event)
+        self._rebuild_layer()
+        self.update()
+
+    def _rebuild_layer(self):
+        w, h = self.width(), self.height()
+        if w <= 0 or h <= 0:
+            self._layer = None
+            self._cache_size = None
+            return
+        if self._cache_size == (w, h) and self._layer is not None:
+            return
+
+        layer = QPixmap(w, h)
+        layer.fill(QColor(0, 0, 0, 0))
+        painter = QPainter(layer)
+        painter.setRenderHint(QPainter.Antialiasing, False)
+
+        # Soft scanlines — light enough not to muddy a mid-dark theme
+        painter.setPen(QColor(0, 0, 0, 22))
+        for y in range(0, h, 3):
+            painter.drawLine(0, y, w, y)
+
+        # Mild edge vignette (not a black hole)
+        vignette = QRadialGradient(w / 2, h / 2, max(w, h) * 0.78)
+        vignette.setColorAt(0.0, QColor(0, 0, 0, 0))
+        vignette.setColorAt(0.75, QColor(0, 0, 0, 0))
+        vignette.setColorAt(1.0, QColor(0, 0, 0, 55))
+        painter.fillRect(0, 0, w, h, vignette)
+        painter.end()
+
+        self._layer = layer
+        self._cache_size = (w, h)
+
+    def paintEvent(self, event):
+        if self._layer is None or self._cache_size != (self.width(), self.height()):
+            self._rebuild_layer()
+        if self._layer is None:
+            return
+        painter = QPainter(self)
+        painter.setRenderHint(QPainter.Antialiasing, False)
+        painter.drawPixmap(0, 0, self._layer)
+
+
+class FirmwareUpdateGUI(QWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.update_thread = None
+        self.flasher_debug = False
+        self.window_name = get_name()
+
+        self.setWindowTitle(self.window_name)
+        self.setWindowIcon(QIcon(resource_path("app.ico")))
+
+        # Set object name for styling
+        self.setObjectName("mainWindow")
+
+        # Set the modern dark theme stylesheet
+        self.setStyleSheet(DARK_THEME_STYLESHEET)
+        self.check_update()
+        self.disclaimer_messagebox()
+
+        self.setGeometry(100, 100, 600, 500)
+        layout = QVBoxLayout()
+        layout.setSpacing(8)
+        layout.setContentsMargins(16, 16, 16, 16)
+
+        # Add CRT scanline overlay
+        self.crt_scanlines = CRTScanlineWidget(self)
+        self.crt_scanlines.setGeometry(self.rect())
+        self.crt_scanlines.raise_()
+
+        # Music player controls (above banner)
+        music_layout = QHBoxLayout()
+        music_layout.setSpacing(4)
+        music_layout.setContentsMargins(0, 0, 0, 0)
+        self.music_prev_button = QPushButton("⏮")
+        self.music_prev_button.setObjectName("musicPrevButton")
+        self.music_prev_button.setToolTip("Previous track")
+        self.music_prev_button.clicked.connect(self.prev_music_track)
+        music_layout.addWidget(self.music_prev_button)
+
+        self.music_play_button = QPushButton("▶")
+        self.music_play_button.setObjectName("musicPlayButton")
+        self.music_play_button.setToolTip("Play / Stop")
+        self.music_play_button.clicked.connect(self.toggle_music_playback)
+        music_layout.addWidget(self.music_play_button)
+
+        self.music_next_button = QPushButton("⏭")
+        self.music_next_button.setObjectName("musicNextButton")
+        self.music_next_button.setToolTip("Next track")
+        self.music_next_button.clicked.connect(self.next_music_track)
+        music_layout.addWidget(self.music_next_button)
+
+        self.music_track_label = QLabel("Track 1/1: Original")
+        self.music_track_label.setObjectName("musicTrackLabel")
+        music_layout.addWidget(self.music_track_label, 1)
+        layout.addLayout(music_layout)
+
+        # Create banner text programmatically
+        self.heading_text = self.create_banner_text()
+        self.heading_label = QLabel(self.heading_text, self)
+        self.heading_label.setAlignment(Qt.AlignCenter)
+        self.heading_label.setObjectName("titleLabel")
+        # Set monospace font for proper ASCII art alignment
+        monospace_font = QFont("monospace", 10)
+        monospace_font.setStyleHint(QFont.Monospace)
+        self.heading_label.setFont(monospace_font)
+        layout.addWidget(self.heading_label)
+
+        # Serial port selection (shared by Controller and Dashboard)
+        layout_h = QHBoxLayout()
+        layout_h.setSpacing(8)
+        self.com_label = QLabel("Serial Port:")
+        self.com_label.setFixedWidth(100)
+        layout_h.addWidget(self.com_label)
+        self.com_port = QComboBox()
+        self.com_port.setEditable(True)
+        self.com_port.addItems(get_serial_ports())
+        self.com_port.setObjectName("serialCombo")
+        layout_h.addWidget(self.com_port, 1)
+        self.refresh_button = QPushButton("Refresh")
+        self.refresh_button.setObjectName("refreshButton")
+        self.refresh_button.setToolTip("Refresh serial ports")
+        self.refresh_button.clicked.connect(self.refresh_serial_ports)
+        layout_h.addWidget(self.refresh_button)
+        layout.addLayout(layout_h)
+
+        # Mode selection (shared)
+        self.simulation_checkbox = QCheckBox("Simulation Mode")
+        self.simulation_checkbox.setObjectName("simulationCheck")
+        layout.addWidget(self.simulation_checkbox)
+
+        self.debug_checkbox = QCheckBox("Debug Mode")
+        self.debug_checkbox.setObjectName("debugCheck")
+        layout.addWidget(self.debug_checkbox)
+
+        # Tabs: Controller (MCU flash) vs Dashboard (LEQI scooter serial)
+        tabs_hint = QLabel(
+            "Connect the UART adapter to the motor controller or the dashboard, "
+            "matching the tab you use."
+        )
+        tabs_hint.setObjectName("tabsHint")
+        tabs_hint.setWordWrap(True)
+        layout.addWidget(tabs_hint)
+
+        self.tabs = QTabWidget()
+        self.tabs.setObjectName("mainTabs")
+        self.tabs.addTab(self._build_controller_tab(), "Controller")
+        self.tabs.addTab(self._build_dashboard_tab(), "Dashboard")
+        layout.addWidget(self.tabs)
+
+        # Progress bar
+        self.progress_bar = QProgressBar()
+        self.progress_bar.setObjectName("progressBar")
+        layout.addWidget(self.progress_bar)
+
+        # Log output
+        self.log_output = QTextEdit()
+        self.log_output.setReadOnly(True)
+        self.log_output.setObjectName("logOutput")
+        layout.addWidget(self.log_output)
+
+        self.status_bar = QStatusBar(self)
+        layout.addWidget(self.status_bar)
+
+        self.setLayout(layout)
+
+        # Set up cursors for better visibility
+        self.setup_cursors()
+
+        # Set up banner animation
+        self.setup_banner_animation()
+
+        # Pause CRT + banner when the app is inactive / minimized
+        app = QGuiApplication.instance()
+        if app is not None:
+            app.applicationStateChanged.connect(self._on_app_state_changed)
+
+        # Set up the media player and play chiptune
+        self.setup_music()
+
+    def _on_app_state_changed(self, state):
+        active = state == Qt.ApplicationActive
+        if hasattr(self, "animation_timer"):
+            if active:
+                if not self.animation_timer.isActive():
+                    self.animation_timer.start(self.animation_speed)
+            else:
+                self.animation_timer.stop()
+
+    def _build_controller_tab(self):
+        """MCU firmware flash / connection test."""
+        tab = QWidget()
+        layout = QVBoxLayout(tab)
+        layout.setSpacing(8)
+        layout.setContentsMargins(8, 12, 8, 8)
+
+        layout_h = QHBoxLayout()
+        layout_h.setSpacing(8)
+        self.file_label = QLabel("Firmware File:")
+        self.file_label.setFixedWidth(100)
+        layout_h.addWidget(self.file_label)
+        self.file_path = QLineEdit()
+        self.file_path.setObjectName("filePath")
+        self.file_path.setPlaceholderText("Select firmware file...")
+        self.file_path.textChanged.connect(self.on_firmware_file_changed)
+        layout_h.addWidget(self.file_path, 1)
+        self.browse_button = QPushButton("Browse")
+        self.browse_button.setObjectName("browseButton")
+        self.browse_button.setToolTip("Select firmware file")
+        self.browse_button.clicked.connect(self.browse_file)
+        layout_h.addWidget(self.browse_button)
+        layout.addLayout(layout_h)
+
+        self.firmware_type_label = QLabel("Firmware Type: Unknown")
+        self.firmware_type_label.setObjectName("firmwareTypeLabel")
+        self.firmware_type_label.setStyleSheet(FIRMWARE_TYPE_STYLES["unknown"])
+        layout.addWidget(self.firmware_type_label)
+
+        layout_h = QHBoxLayout()
+        layout_h.setSpacing(12)
+        self.test_button = QPushButton("Test Connection")
+        self.test_button.setObjectName("testButton")
+        self.test_button.clicked.connect(self.test_connection)
+        layout_h.addWidget(self.test_button)
+        self.start_button = QPushButton("Start Update")
+        self.start_button.setObjectName("startButton")
+        self.start_button.clicked.connect(self.start_update)
+        layout_h.addWidget(self.start_button)
+        layout.addLayout(layout_h)
+
+        self.test_button.setEnabled(False)
+        self.start_button.setEnabled(False)
+        layout.addStretch(1)
+        return tab
+
+    def _build_dashboard_tab(self):
+        """LEQI dashboard scooter serial (BLE NVM via UART)."""
+        tab = QWidget()
+        layout = QVBoxLayout(tab)
+        layout.setSpacing(8)
+        layout.setContentsMargins(8, 12, 8, 8)
+
+        hint = QLabel("LEQI only — sets the scooter serial stored in the dashboard BLE module.")
+        hint.setObjectName("dashboardHint")
+        hint.setWordWrap(True)
+        layout.addWidget(hint)
+
+        layout_h = QHBoxLayout()
+        layout_h.setSpacing(8)
+        self.serial_prefix_label = QLabel("Prefix:")
+        self.serial_prefix_label.setFixedWidth(70)
+        layout_h.addWidget(self.serial_prefix_label)
+        self.serial_prefix_input = QLineEdit()
+        self.serial_prefix_input.setPlaceholderText(SERIAL_PREFIX_EXAMPLE)
+        self.serial_prefix_input.setMaxLength(SERIAL_PREFIX_LENGTH)
+        self.serial_prefix_input.setToolTip(f"Prefix ({SERIAL_PREFIX_LENGTH} characters)")
+        layout_h.addWidget(self.serial_prefix_input, 1)
+        layout.addLayout(layout_h)
+
+        layout_h = QHBoxLayout()
+        layout_h.setSpacing(8)
+        self.serial_suffix_label = QLabel("Serial:")
+        self.serial_suffix_label.setFixedWidth(70)
+        layout_h.addWidget(self.serial_suffix_label)
+        self.serial_suffix_input = QLineEdit()
+        self.serial_suffix_input.setPlaceholderText(SERIAL_SUFFIX_EXAMPLE)
+        self.serial_suffix_input.setMaxLength(SERIAL_SUFFIX_LENGTH)
+        self.serial_suffix_input.setToolTip(f"Serial ({SERIAL_SUFFIX_LENGTH} characters)")
+        layout_h.addWidget(self.serial_suffix_input, 1)
+        layout.addLayout(layout_h)
+
+        self.set_serial_button = QPushButton("Set Serial")
+        self.set_serial_button.setObjectName("setSerialButton")
+        self.set_serial_button.clicked.connect(self.set_serial_number)
+        layout.addWidget(self.set_serial_button)
+        layout.addStretch(1)
+        return tab
+
+    def resizeEvent(self, event):
+        """Handle window resize to update effect overlays"""
+        super().resizeEvent(event)
+        if hasattr(self, 'crt_scanlines'):
+            self.crt_scanlines.setGeometry(self.rect())
+
+    def create_banner_text(self):
+        """Create banner text programmatically with proper character counts"""
+        # Banner configuration
+        title = f"Brightway Flasher v{__version__}"
+        subtitle = "by ScooterTeam"
+        
+        # Calculate total width (using current banner as reference)
+        total_width = 58  # Total characters per line
+        
+        # Calculate padding for center alignment
+        title_padding = (total_width - 2 - len(title)) // 2  # -2 for │ characters
+        subtitle_padding = (total_width - 2 - len(subtitle)) // 2
+        
+        # Create lines
+        top_line = "┌" + "─" * (total_width - 2) + "┐"
+        title_line = "│" + " " * title_padding + title + " " * (total_width - 2 - title_padding - len(title)) + "│"
+        subtitle_line = "│" + " " * subtitle_padding + subtitle + " " * (total_width - 2 - subtitle_padding - len(subtitle)) + "│"
+        bottom_line = "└" + "─" * (total_width - 2) + "┘"
+        
+        return f"{top_line}\n{title_line}\n{subtitle_line}\n{bottom_line}"
+
+    def setup_cursors(self):
+        """Set up proper cursors for better visibility on all devices"""
+        # Set default cursor for the main window
+        self.setCursor(Qt.ArrowCursor)
+        
+        # Set text cursor for input fields
+        self.file_path.setCursor(Qt.IBeamCursor)
+        self.com_port.setCursor(Qt.IBeamCursor)
+        self.serial_prefix_input.setCursor(Qt.IBeamCursor)
+        self.serial_suffix_input.setCursor(Qt.IBeamCursor)
+        self.log_output.setCursor(Qt.IBeamCursor)
+        
+        # Set pointer cursor for clickable elements
+        self.browse_button.setCursor(Qt.PointingHandCursor)
+        self.refresh_button.setCursor(Qt.PointingHandCursor)
+        self.test_button.setCursor(Qt.PointingHandCursor)
+        self.start_button.setCursor(Qt.PointingHandCursor)
+        self.set_serial_button.setCursor(Qt.PointingHandCursor)
+        self.simulation_checkbox.setCursor(Qt.PointingHandCursor)
+        self.debug_checkbox.setCursor(Qt.PointingHandCursor)
+        self.music_prev_button.setCursor(Qt.PointingHandCursor)
+        self.music_play_button.setCursor(Qt.PointingHandCursor)
+        self.music_next_button.setCursor(Qt.PointingHandCursor)
+
+    def setup_banner_animation(self):
+        """Set up Knight Rider-style banner animation"""
+        self.animation_position = 0
+        self.animation_direction = 1  # 1 for right, -1 for left
+        self.animation_speed = 100  # milliseconds between updates
+        self._banner_base_lines = self.create_banner_text().split("\n")
+        self._banner_bar_chars = ["█", "▓", "▒"]  # short phosphor trail
+
+        self.animation_timer = QTimer(self)
+        self.animation_timer.timeout.connect(self.update_banner_animation)
+        self.animation_timer.start(self.animation_speed)
+
+        self.update_banner_animation()
+
+    def update_banner_animation(self):
+        """Update the Knight Rider-style animation"""
+        lines = self._banner_base_lines
+        banner_width = len(lines[0]) if lines else 58
+        self.animation_position += self.animation_direction
+
+        if self.animation_position >= banner_width - 1:
+            self.animation_direction = -1
+        elif self.animation_position <= 0:
+            self.animation_direction = 1
+
+        animated_lines = []
+        for i, line in enumerate(lines):
+            if i == 1:  # Title line - add animation bar
+                animated_lines.append(
+                    self.create_animated_line(line, self.animation_position, self._banner_bar_chars)
+                )
+            else:
+                animated_lines.append(line)
+
+        self.heading_label.setText("\n".join(animated_lines))
+
+    def create_animated_line(self, base_line, position, bar_chars):
+        """Create a line with Knight Rider-style animation bar"""
+        line_chars = list(base_line)
+
+        if 0 <= position < len(line_chars):
+            for i, char in enumerate(bar_chars):
+                if self.animation_direction > 0:
+                    pos = position - i  # Moving right, tail is to the left
+                else:
+                    pos = position + i  # Moving left, tail is to the right
+
+                if 0 <= pos < len(line_chars) and line_chars[pos] == " ":
+                    line_chars[pos] = char
+
+        return "".join(line_chars)
+
+    def setup_music(self):
+        """Set up chiptune playlist player and auto-play first track."""
+        self.music_player = None
+        try:
+            self.music_player = ChiptunePlayer(self)
+            self.music_player.track_changed.connect(self._on_music_track_changed)
+            self.music_player.playback_state_changed.connect(self._on_music_playback_state_changed)
+            if self.music_player.available:
+                self.music_track_label.setText(self.music_player.track_label())
+                self.music_player.start()
+            else:
+                self._set_music_controls_enabled(False)
+        except Exception:
+            self._set_music_controls_enabled(False)
+
+    def _set_music_controls_enabled(self, enabled):
+        for button in (
+            self.music_prev_button,
+            self.music_play_button,
+            self.music_next_button,
+        ):
+            button.setEnabled(enabled)
+
+    def _on_music_track_changed(self, index, title):
+        if self.music_player:
+            self.music_track_label.setText(self.music_player.track_label())
+
+    def _on_music_playback_state_changed(self, is_playing):
+        self.music_play_button.setText("■" if is_playing else "▶")
+
+    def toggle_music_playback(self):
+        if self.music_player:
+            self.music_player.toggle_play_stop()
+
+    def next_music_track(self):
+        if self.music_player:
+            self.music_player.next_track()
+
+    def prev_music_track(self):
+        if self.music_player:
+            self.music_player.prev_track()
+
+    def setup_animation(self):
+        # Animation removed - kept for compatibility
+        pass
+
+    def update_animation(self):
+        # Animation removed - kept for compatibility
+        pass
+
+    def browse_file(self):
+        file, _ = QFileDialog.getOpenFileName(
+            self,
+            "Select Firmware File",
+            "",
+            "BIN Files (*.bin);;All Files (*)"
+        )
+        if file:
+            self.file_path.setText(file)
+            self.update_firmware_type_label(file)
+
+    def on_firmware_file_changed(self, file_path):
+        """Called when firmware file path changes"""
+        is_valid = file_path and os.path.exists(file_path)
+
+        # Enable/disable buttons based on file validity
+        self.test_button.setEnabled(is_valid)
+        self.start_button.setEnabled(is_valid)
+
+        if is_valid:
+            self.update_firmware_type_label(file_path)
+        else:
+            self.firmware_type_label.setText("Firmware Type: Unknown")
+            self.firmware_type_label.setStyleSheet(FIRMWARE_TYPE_STYLES["unknown"])
+
+    def update_firmware_type_label(self, file_path):
+        """Update the firmware type label based on detected firmware type"""
+        try:
+            fw_type, fw_info = get_firmware_info(open(file_path, 'rb').read())
+
+            if fw_type == FirmwareType.BRIGHTWAY:
+                self.firmware_type_label.setText(f"Firmware Type: Brightway (ARM Cortex-M)")
+                self.firmware_type_label.setStyleSheet(FIRMWARE_TYPE_STYLES["ok"])
+            elif fw_type == FirmwareType.LEQI:
+                self.firmware_type_label.setText(f"Firmware Type: LEQI (Encrypted)")
+                self.firmware_type_label.setStyleSheet(FIRMWARE_TYPE_STYLES["ok"])
+            elif fw_type == FirmwareType.NINEBOT:
+                self.firmware_type_label.setText(f"Firmware Type: Ninebot (v{fw_info['version']})")
+                self.firmware_type_label.setStyleSheet(FIRMWARE_TYPE_STYLES["ok"])
+            else:
+                self.firmware_type_label.setText("Firmware Type: Unknown")
+                self.firmware_type_label.setStyleSheet(FIRMWARE_TYPE_STYLES["unknown"])
+        except Exception as e:
+            self.firmware_type_label.setText(f"Firmware Type: Error ({str(e)})")
+            self.firmware_type_label.setStyleSheet(FIRMWARE_TYPE_STYLES["warn"])
+
+    def refresh_serial_ports(self):
+        """Refresh the list of available serial ports"""
+        # Store current selection
+        current_port = self.com_port.currentText()
+
+        # Clear and repopulate
+        self.com_port.clear()
+        ports = get_serial_ports()
+        self.com_port.addItems(ports)
+
+        # Restore previous selection if still available
+        if current_port and current_port in ports:
+            self.com_port.setCurrentText(current_port)
+
+        # Show status message
+        self.status_bar.showMessage(f"Found {len(ports)} serial port(s)", 2000)
+
+    def _assembled_scooter_serial(self):
+        """Build the full 19-char scooter serial from prefix + serial fields."""
+        return f"{self.serial_prefix_input.text()}{self.serial_suffix_input.text()}"
+
+    def set_serial_number(self):
+        serial_number = self._assembled_scooter_serial()
+        try:
+            validate_serial_number(serial_number)
+        except ValueError as e:
+            self.update_status(
+                f"{e} (prefix {SERIAL_PREFIX_LENGTH} + serial {SERIAL_SUFFIX_LENGTH} "
+                f"= {SERIAL_NUMBER_LENGTH} characters)"
+            )
+            return
+
+        simulation = self.simulation_checkbox.isChecked()
+        self.flasher_debug = self.debug_checkbox.isChecked()
+        com_port = self.com_port.currentText()
+        if not simulation and not com_port:
+            self.update_status("Please select a serial port!")
+            return
+
+        self.update_thread = SetSerialNumberThread(
+            com_port, serial_number, simulation, self.flasher_debug
+        )
+        self.start_thread()
+
+    def test_connection(self):
+        simulation = self.simulation_checkbox.isChecked()
+        self.flasher_debug = self.debug_checkbox.isChecked()
+        com_port = self.com_port.currentText()
+        firmware_file = self.file_path.text()
+
+        self.update_thread = TestConnectionThread(com_port, firmware_file, simulation, self.flasher_debug)
+        self.start_thread()
+
+    def start_update(self):
+        firmware_file = self.file_path.text()
+        if not firmware_file:
+            self.update_status("Please select a firmware file!")
+            return
+
+        simulation = self.simulation_checkbox.isChecked()
+        self.flasher_debug = self.debug_checkbox.isChecked()
+        com_port = self.com_port.currentText()
+
+        self.update_thread = FirmwareUpdateThread(com_port, firmware_file, simulation, self.flasher_debug)
+        self.start_thread()
+
+    def _set_action_buttons_enabled(self, enabled: bool):
+        firmware_ok = bool(self.file_path.text() and os.path.exists(self.file_path.text()))
+        self.test_button.setEnabled(enabled and firmware_ok)
+        self.start_button.setEnabled(enabled and firmware_ok)
+        self.set_serial_button.setEnabled(enabled)
+
+    def start_thread(self):
+        self.update_thread.progress_signal.connect(self.update_progress)
+        self.update_thread.debug_signal.connect(self.debug_log)
+        self.update_thread.status_signal.connect(self.update_status)
+        self.update_thread.exception_signal.connect(self.exception_messagebox)
+        self.log_output.clear()
+        self.update_thread.start()
+
+        self.test_button.setEnabled(False)
+        self.start_button.setEnabled(False)
+        self.set_serial_button.setEnabled(False)
+
+    def update_progress(self, value):
+        self.progress_bar.setValue(value)
+        if value == 100:
+            self._set_action_buttons_enabled(True)
+
+    def update_status(self, message):
+        if self.flasher_debug:
+            self.status_bar.showMessage(message, 2000)
+        else:
+            self.log_output.append(message)
+
+    def debug_log(self, message):
+        self.log_output.append(message)
+
+    def exception_messagebox(self, thread_signal: list):
+        error_type = thread_signal[0]
+        message = thread_signal[1]
+
+        error_dialog = QMessageBox(self)
+        error_dialog.setIcon(QMessageBox.Critical)
+        error_dialog.setWindowTitle(f"{self.window_name} - {error_type} Error")
+        error_dialog.setText(message)
+        error_dialog.exec()
+        self._set_action_buttons_enabled(True)
+
+    def disclaimer_messagebox(self):
+        messagebox = QMessageBox(self)
+        messagebox.setIcon(QMessageBox.Warning)
+        messagebox.setWindowTitle(f"{self.window_name} - Important Legal Notice")
+
+        disclaimer_text = """<h3>⚠️ IMPORTANT: Read Before Using</h3>
+
+<p><b>This tool is for EDUCATIONAL and RESEARCH purposes only.</b></p>
+
+<p><b>YOU OWN WHAT YOU BUY:</b> This tool helps you understand and modify devices you own.
+However, modifications may be dangerous and illegal.</p>
+
+<p><b style="color: #ff6b6b;">Safety Warnings:</b></p>
+<ul>
+<li>May void your warranty</li>
+<li>May violate local laws and regulations</li>
+<li>Modified devices may be illegal to operate</li>
+<li>YOU assume ALL liability for injuries, accidents, and legal consequences</li>
+</ul>
+
+<p><b>No Commercial Use:</b> This software is CC-BY-NC-SA licensed.
+Commercial use is strictly prohibited.</p>
+
+<p><b>No Warranty:</b> Provided AS-IS with no guarantees. Authors accept NO liability.</p>
+
+<p style="font-size: 11px; margin-top: 10px;">
+By clicking 'Accept', you acknowledge these risks and agree to use responsibly.
+</p>
+"""
+
+        messagebox.setText(disclaimer_text)
+        messagebox.setStandardButtons(QMessageBox.Ok | QMessageBox.Cancel)
+        messagebox.setDefaultButton(QMessageBox.Cancel)
+
+        ok_button = messagebox.button(QMessageBox.Ok)
+        ok_button.setText("Accept")
+
+        cancel_button = messagebox.button(QMessageBox.Cancel)
+        cancel_button.setText("Exit")
+
+        result = messagebox.exec()
+
+        if result == QMessageBox.Cancel:
+            sys.exit(0)
+
+    def check_update(self):
+        try:
+            update_details = check_update()
+        except requests.exceptions.RequestException as e:
+            messagebox = QMessageBox(self)
+            messagebox.setIcon(QMessageBox.Critical)
+            messagebox.setWindowTitle(f"{self.window_name} - Updater Error")
+            messagebox.setText(f"Failed to check the availability of program updates!\n{e}")
+            messagebox.exec()
+            return
+
+        if not update_details:
+            return
+
+        new_version = update_details["tag_name"]
+        url_download = update_details["html_url"]
+
+        messagebox = QMessageBox(self)
+        messagebox.setIcon(QMessageBox.Question)
+        messagebox.setWindowTitle(f"{self.window_name} - Update Available")
+        messagebox.setText(f"There is an BWFlasher {new_version} update available! Would you like to download it now?")
+        messagebox.setStandardButtons(QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
+
+        x = messagebox.exec()
+        if x == QMessageBox.StandardButton.Yes:
+            webbrowser.open(url_download)
+            sys.exit(0)
+
+
+if __name__ == "__main__":
+    app = QApplication(sys.argv)
+    window = FirmwareUpdateGUI()
+    window.show()
+    sys.exit(app.exec())

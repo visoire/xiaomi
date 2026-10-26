@@ -1,0 +1,108 @@
+SCHRITT 1 SOFTWARE VORBEREITUNG
+
+Laden Sie das Programm BW Flasher fur Ihr Betriebssystem herunter. 
+Nutzen Sie die Webseite MI Firmware Info fur den Bezug der originalen Dateien. 
+Wahlen Sie Ihr Modell (z.B Xiaomi 5 Pro, Xiaomi 6, Xiaomi 6 Lite) aus der Liste.
+Speichern Sie die Datei fur die MCU Firmware Details auf Ihrem Computer.
+
+
+BW-Flasher:
+https://github.com/scooterteam/bw-flasher/releases/
+
+mi-fw-info:
+https://mi-fw-info.streamlit.app/
+
+SCHRITT 2 ANPASSUNG DER FIRMWARE
+
+Offnen Sie die Webseite BW Patcher im Browser.
+Laden Sie Ihre gespeicherte Firmware Datei dort hoch.
+Wahlen Sie erneut Ihr Rollermodell aus.
+Aktivieren Sie die Option zur Aufhebung der Geschwindigkeitsbegrenzung. 
+Laden Sie die neue Datei auf Ihren PC herunter.
+
+BW-Patcher:
+https://bw-patcher.streamlit.app/
+
+SCHRITT 3 MECHANISCHE VORBEREITUNG
+
+Losen Sie die vier Schrauben am Kopf Ihres Rollers mit dem originalen Werkzeug.
+Heben Sie den Lenker an. 
+Platzieren Sie diesen stabil auf einer erhohten Flache. 
+Schalten Sie den Roller ein. 
+Offnen Sie die Xiaomi Home App auf Ihrem Telefon. 
+Aktivieren Sie die dauerhafte Beleuchtung des Rucklichts. 
+Alternativ schalten Sie das Rucklicht per Knopf.
+Trennen Sie den funfpoligen Stecker zwischen Lenker und Basis des Rollers.
+
+SCHRITT 4 HARDWARE VERBINDUNG
+
+Verbinden Sie Ihren Julet 5 Pin Stecker (M7 fur Brightway, M8 fur LEQI / 6er Serie - 1:1 identisch mit 5 Elite) mit dem UART Adapter. (connect.png)
+(Hinweis zur 6. Generation: 6 und 6 Lite konnen uber M8 geflasht werden, experimenteller Support im bw-patcher hinzugefugt. 6 Pro / Max / Ultra werden derzeit nicht unterstutzt.)
+Stecken Sie den UART Adapter in einen USB Port Ihres Computers. 
+Prufen Sie im Gerate Manager die Zuweisung des COM Ports. (manager.png)
+Installieren Sie bei Bedarf die erforderlichen Treiber manuell (FTDI).
+FTDI (UART) driver (treiber):
+https://ftdichip.com/wp-content/uploads/2025/03/CDM2123620_Setup.zip
+Verbinden Sie den Julet Stecker mit dem Kabel aus dem Holm des Rollers.
+Achten Sie auf die Pfeilmarkierungen an beiden Steckern.
+
+SCHRITT 5 INSTALLATION DER NEUEN SOFTWARE
+
+Starten Sie das Programm BW Flasher. 
+Wahlen Sie den identifizierten COM Port aus. 
+Laden Sie die angepasste Firmware Datei in das Programm. 
+Aktivieren Sie den Debug Modus zur Fehlerkontrolle. 
+Starten Sie das Update. 
+Bewegen Sie wahrend der ubertragung weder die Kabel noch den Roller.
+Warten Sie auf die Meldung uber den erfolgreichen Abschluss.
+
+ABSCHLUSS
+
+Trennen Sie die Verbindung zum Computer. 
+Stecken Sie die originale Verbindung zum Lenker wieder zusammen. 
+Schrauben Sie den Lenker fest. 
+Fuhren Sie eine Funktionsprufung durch. 
+Ihr Roller uberschreitet nun die ursprungliche Geschwindigkeitsbegrenzung. 
+Ein akustisches Signal oder Blinken bei hoheren Geschwindigkeiten ist Teil der geanderten Firmware. 
+Das akustische Warnsignal ist bei hohen Geschwindigkeiten vermeidbar. 
+Es tritt ab 30 Kilometern pro Stunde auf. 
+Eine Begrenzung auf 29 Kilometer pro Stunde im Patcher unterdruckt dieses Signal.
+
+WICHTIG: 
+Wenn der Julet 5 Pin Stecker nicht passt, muss man ihn unten aufschneiden.
+Am besten die untere halfte
+WICHTIG NICHT OBEN!
+SIEHE steckerfix.png
+
+Tutorial: 
+https://wiki.bastelpichi.de/brightway
+
+https://www.youtube.com/watch?v=YJl8iXx8V6k
+https://www.youtube.com/watch?v=vq3OMxMlir0
+https://www.youtube.com/watch?v=9ldzxTGJYt0
+https://www.youtube.com/watch?v=MEVXANRJ1IM
+https://www.youtube.com/watch?v=ya1LK-qT3T0
+
+
+Scooterhacking: 
+https://scooterhacking.org/
+
+
+Bitte fuhren Sie folgende Schritte noch einmal genau aus:
+Verkabelung prufen: RX mit RX, TX mit TX, GND mit GND verbinden, das ist entscheidend.
+
+Roller vorbereiten: Licht dauerhaft einschalten (uber App oder Knopf), Verbindung am unteren Kabelbaum herstellen (nicht am Lenker).
+
+PC vorbereiten: Prufen, ob der COM-Port im Gerate-Manager erkannt wird. Falls nicht: FTDI-Treiber installieren.
+
+BW-Flasher: Richtigen COM-Port auswahlen, zuerst auf „Test Port“ klicken, erst wenn die Verbindung bestatigt wird, die gepatchte Datei laden und flashen.
+
+Falls weiterhin Fehler kommt: Software schließen, neu offnen, Roller neu starten, Kabel nochmal stecken.
+
+BW Flasher neu starten. Anderen USB-Port versuchen. Sicherstellen, dass der Roller an ist. FTDI-Treiber neu installieren.
+
+Nur die MCU-Firmware von mi-fw-info verwenden. Das vollstandige Paket oder die BLE-Datei funktioniert nicht.
+
+Anderen USB-Port/Kabel versuchen oder einen USB-Hub dazwischenschalten.
+
+FTDI-Treiber installieren oder aktualisieren. Anderen USB-Anschluss versuchen.

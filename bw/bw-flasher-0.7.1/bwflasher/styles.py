@@ -1,0 +1,532 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# BW Flasher - Modern Dark Theme
+# Copyright (C) 2024-2025 ScooterTeam
+#
+
+COLOR_PALETTE = {
+    'primary': '#0ea5e9',       # Fresh sky blue
+    'primary_dark': '#0284c7',  # Darker sky blue
+    'primary_light': '#38bdf8', # Lighter sky blue
+    'background': '#0d1117',    # GitHub dark
+    'surface': '#161b22',       # Surface color
+    'text': '#e6e6e6',          # Light grey text
+    'text_secondary': '#7d8590', # Muted text
+    'border': '#30363d',        # Border color
+    'error': '#f85149',         # Error color
+    'success': '#3fb950',       # Success color
+    'warning': '#d29922',       # Warning color
+    'accent': '#0ea5e9',        # Sky blue accent
+    # Firmware type label helpers (match prior inline styles)
+    'fw_ok_bg': '#1e3a1e',
+    'fw_ok_border': '#2d5a2d',
+    'fw_ok_text': '#66ff66',
+    'fw_unknown_bg': '#2b2b2b',
+    'fw_unknown_border': '#3a3a3a',
+    'fw_unknown_text': '#999999',
+    'fw_warn_bg': '#3a3a1e',
+    'fw_warn_border': '#5a5a2d',
+    'fw_warn_text': '#ffff66',
+}
+
+_P = COLOR_PALETTE
+
+
+def _firmware_type_style(bg: str, border: str, color: str) -> str:
+    return f"""
+        QLabel#firmwareTypeLabel {{
+            background-color: {bg};
+            padding: 8px 12px;
+            border-radius: 4px;
+            font-weight: bold;
+            border: 1px solid {border};
+            color: {color};
+        }}
+    """
+
+
+FIRMWARE_TYPE_STYLES = {
+    "ok": _firmware_type_style(_P["fw_ok_bg"], _P["fw_ok_border"], _P["fw_ok_text"]),
+    "unknown": _firmware_type_style(
+        _P["fw_unknown_bg"], _P["fw_unknown_border"], _P["fw_unknown_text"]
+    ),
+    "warn": _firmware_type_style(_P["fw_warn_bg"], _P["fw_warn_border"], _P["fw_warn_text"]),
+}
+
+
+DARK_THEME_STYLESHEET = """
+/* Professional 'Terminal' Theme for BWFlasher */
+QWidget {
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 12pt;
+    color: #e6e6e6;
+    font-weight: 400;
+}
+
+/* Main Window */
+QWidget#mainWindow {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+        stop:0 #0d1117, stop:0.3 #161b22, stop:0.7 #21262d, stop:1 #30363d);
+    border: none;
+}
+
+/* Application Title */
+QLabel#titleLabel {
+    font-size: 17px;
+    font-weight: 600;
+    color: #0ea5e9;
+    padding: 12px 16px;
+    background: rgba(14, 165, 233, 0.08);
+    border-radius: 4px;
+    margin: 8px;
+    border: 1px solid rgba(14, 165, 233, 0.15);
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    line-height: 1.2;
+}
+
+/* Specific widget styling */
+QComboBox#serialCombo {
+    min-width: 200px;
+}
+
+QLineEdit#filePath {
+    min-width: 300px;
+}
+
+QPushButton#browseButton {
+    min-width: 80px;
+    max-width: 80px;
+}
+
+QPushButton#refreshButton {
+    min-width: 80px;
+    max-width: 80px;
+}
+
+QPushButton#musicPrevButton,
+QPushButton#musicPlayButton,
+QPushButton#musicNextButton {
+    min-width: 28px;
+    max-width: 32px;
+    min-height: 24px;
+    max-height: 26px;
+    padding: 2px 4px;
+    font-size: 9pt;
+}
+
+QLabel#musicTrackLabel {
+    color: #9ca3af;
+    font-size: 9pt;
+    padding: 2px 6px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 3px;
+    border: 1px solid #30363d;
+    max-height: 24px;
+}
+
+QPushButton#testButton, QPushButton#startButton {
+    min-width: 140px;
+    font-size: 12pt;
+}
+
+QPushButton#setSerialButton {
+    min-width: 140px;
+    font-size: 12pt;
+}
+
+QTabWidget#mainTabs::pane {
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    background: rgba(13, 17, 23, 0.6);
+    top: -1px;
+}
+
+QTabWidget#mainTabs QTabBar::tab {
+    background: #161b22;
+    color: #9ca3af;
+    border: 1px solid #30363d;
+    border-bottom: none;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    padding: 6px 16px;
+    margin-right: 2px;
+    min-width: 100px;
+}
+
+QTabWidget#mainTabs QTabBar::tab:selected {
+    background: #21262d;
+    color: #0ea5e9;
+    border-color: #0ea5e9;
+}
+
+QTabWidget#mainTabs QTabBar::tab:hover:!selected {
+    color: #e6e6e6;
+    background: #1c2128;
+}
+
+QLabel#dashboardHint,
+QLabel#tabsHint {
+    color: #9ca3af;
+    font-size: 10pt;
+    padding: 4px 2px;
+}
+
+QProgressBar#progressBar {
+    min-height: 30px;
+    font-size: 12pt;
+}
+
+QTextEdit#logOutput {
+    min-height: 200px;
+    font-size: 12pt;
+}
+
+/* Input Fields */
+QLineEdit, QComboBox {
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    padding: 6px 10px;
+    background: #0d1117;
+    color: #e6e6e6;
+    font-size: 12pt;
+    font-weight: 400;
+    selection-background-color: #58a6ff;
+}
+
+QLineEdit:focus, QComboBox:focus {
+    border: 1px solid #0ea5e9;
+    background: #161b22;
+}
+
+QLineEdit::placeholder {
+    color: #7d8590;
+    font-style: normal;
+}
+
+QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QComboBox::down-arrow {
+    image: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #0ea5e9;
+    margin-right: 4px;
+}
+
+QComboBox QAbstractItemView {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    selection-background-color: #0ea5e9;
+    color: #e6e6e6;
+    outline: none;
+}
+
+/* Buttons */
+QPushButton {
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    padding: 8px 16px;
+    background: #21262d;
+    color: #e6e6e6;
+    font-weight: 500;
+    font-size: 12pt;
+    min-width: 100px;
+    min-height: 28px;
+}
+
+QPushButton:hover {
+    background: #30363d;
+    border: 1px solid #0ea5e9;
+    color: #0ea5e9;
+}
+
+QPushButton:pressed {
+    background: #0d1117;
+    border: 1px solid #58a6ff;
+    color: #58a6ff;
+}
+
+QPushButton:disabled {
+    background: #161b22;
+    color: #7d8590;
+    border: 1px solid #21262d;
+}
+
+/* Progress Bar */
+QProgressBar {
+    border: 1px solid #30363d;
+    border-radius: 2px;
+    text-align: center;
+    background: #0d1117;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 9pt;
+    min-height: 16px;
+}
+
+QProgressBar::chunk {
+    background: #0ea5e9;
+    border-radius: 1px;
+    margin: 1px;
+}
+
+/* Text Edit (Log Output) */
+QTextEdit {
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    background: #0d1117;
+    color: #e6e6e6;
+    padding: 8px;
+    font-family: 'Fira Code', 'Consolas', 'Monaco', monospace;
+    font-size: 8pt;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+QTextEdit:focus {
+    border: 1px solid #0ea5e9;
+}
+
+/* Checkboxes */
+QCheckBox {
+    spacing: 8px;
+    color: #e6e6e6;
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+QCheckBox::indicator {
+    width: 14px;
+    height: 14px;
+    border: 1px solid #30363d;
+    border-radius: 2px;
+    background: #0d1117;
+}
+
+QCheckBox::indicator:hover {
+    border: 1px solid #0ea5e9;
+    background: #161b22;
+}
+
+QCheckBox::indicator:checked {
+    background: #0ea5e9;
+    border: 1px solid #0ea5e9;
+    image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEwIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDMuOEwzLjggNi42TDkgMSIgc3Ryb2tlPSIjMGQxMTE3IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K);
+}
+
+QCheckBox::indicator:checked:hover {
+    background: #38bdf8;
+    border: 1px solid #38bdf8;
+}
+
+
+/* Status Bar */
+QStatusBar {
+    border-top: 1px solid #30363d;
+    background: #0d1117;
+    color: #7d8590;
+    font-size: 8pt;
+    font-weight: 400;
+    padding: 4px;
+}
+
+/* Labels */
+QLabel {
+    color: #e6e6e6;
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+/* Scrollbars */
+QScrollBar:vertical {
+    background: #0d1117;
+    width: 8px;
+    border-radius: 4px;
+}
+
+QScrollBar::handle:vertical {
+    background: #30363d;
+    border-radius: 4px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #0ea5e9;
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+/* Tooltips */
+QToolTip {
+    background: #0d1117;
+    border: 1px solid #1f6feb;
+    border-radius: 4px;
+    color: #e6e6e6;
+    padding: 6px;
+    font-size: 8pt;
+    font-weight: 400;
+}
+
+/* Message Boxes */
+QMessageBox {
+    background: #0d1117;
+    color: #e6e6e6;
+}
+
+QMessageBox QPushButton {
+    min-width: 80px;
+    min-height: 24px;
+}
+
+/* File Dialog - Guaranteed Dark Theme */
+QFileDialog {
+    background: #0d1117;
+    color: #e6e6e6;
+}
+
+QFileDialog QListView {
+    background: #0d1117;
+    color: #e6e6e6;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+}
+
+QFileDialog QListView::item {
+    background: #0d1117;
+    color: #e6e6e6;
+    padding: 4px;
+}
+
+QFileDialog QListView::item:selected {
+    background: #0ea5e9;
+    color: #ffffff;
+}
+
+QFileDialog QListView::item:hover {
+    background: #161b22;
+    color: #e6e6e6;
+}
+
+QFileDialog QLineEdit {
+    background: #0d1117;
+    color: #e6e6e6;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+QFileDialog QLineEdit:focus {
+    border: 1px solid #0ea5e9;
+    background: #161b22;
+}
+
+QFileDialog QPushButton {
+    background: #21262d;
+    color: #e6e6e6;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    padding: 8px 16px;
+    min-width: 80px;
+    min-height: 24px;
+}
+
+QFileDialog QPushButton:hover {
+    background: #30363d;
+    border: 1px solid #0ea5e9;
+    color: #0ea5e9;
+}
+
+QFileDialog QPushButton:pressed {
+    background: #0d1117;
+    border: 1px solid #0ea5e9;
+    color: #0ea5e9;
+}
+
+QFileDialog QComboBox {
+    background: #0d1117;
+    color: #e6e6e6;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    padding: 6px 10px;
+}
+
+QFileDialog QComboBox:focus {
+    border: 1px solid #0ea5e9;
+    background: #161b22;
+}
+
+QFileDialog QComboBox::drop-down {
+    border: none;
+    width: 20px;
+}
+
+QFileDialog QComboBox::down-arrow {
+    image: none;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 4px solid #0ea5e9;
+    margin-right: 4px;
+}
+
+QFileDialog QComboBox QAbstractItemView {
+    background: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    selection-background-color: #0ea5e9;
+    color: #e6e6e6;
+    outline: none;
+}
+
+QFileDialog QLabel {
+    color: #e6e6e6;
+    font-size: 12pt;
+    font-weight: 400;
+}
+
+QFileDialog QTreeView {
+    background: #0d1117;
+    color: #e6e6e6;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+}
+
+QFileDialog QTreeView::item {
+    background: #0d1117;
+    color: #e6e6e6;
+    padding: 2px;
+}
+
+QFileDialog QTreeView::item:selected {
+    background: #0ea5e9;
+    color: #ffffff;
+}
+
+QFileDialog QTreeView::item:hover {
+    background: #161b22;
+    color: #e6e6e6;
+}
+
+QFileDialog QHeaderView::section {
+    background: #161b22;
+    color: #e6e6e6;
+    border: 1px solid #30363d;
+    padding: 4px;
+}
+
+QFileDialog QHeaderView::section:hover {
+    background: #21262d;
+    color: #0ea5e9;
+}
+
+/* Checkbox glow when checked */
+QCheckBox#simulationCheck:checked, QCheckBox#debugCheck:checked {
+    color: #0ea5e9;
+}
+"""

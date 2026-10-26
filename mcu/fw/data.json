@@ -1,0 +1,1428 @@
+[
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1625653273956_4ujT51DEJUVlkFZ6MiMzqoLOTj9tr1Kw.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=BH3SnXBvgUtDoFyzas4r4EKl3aI="
+    },
+    "firmware": {
+      "changeLog": "\u00b7 Fix known issues\n\u00b7 Optimize user experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "\u00b7 Fix known issues",
+      "mcu_change_log": "\u00b7 Optimize user experience",
+      "mcu_md5": "566f29df36d907308cc8968b8180de57",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/566f29df36d907308cc8968b8180de57_mcu_dreame.scooter.epro.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030414189&Signature=n+6V0h6lOQ/3QVJ25SEYeLCtelY=",
+      "mcu_version": "0216",
+      "md5": "b138965b3304b045818debd5fc10d377",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/b138965b3304b045818debd5fc10d377_upd_dreame.scooter.epro.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030415453&Signature=YcEPSNrhviyW7wzylV3LPURBIhU=",
+      "time_out": 30,
+      "upload_time": 1714117089,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/b138965b3304b045818debd5fc10d377_upd_dreame.scooter.epro.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030415453&Signature=YcEPSNrhviyW7wzylV3LPURBIhU=",
+      "version": "2.5.0_0132"
+    },
+    "model": "dreame.scooter.epro",
+    "name": "Xiaomi Electric Scooter 3 Lite"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1768792639067_wKkW2hnbfpVxYw8I6Mw0KM9lAqJfbReI.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=Zu4Ap4QdWneVqgamtMqhYjZVdQY="
+    },
+    "firmware": {
+      "changeLog": "0011\n0013",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "0011",
+      "mcu_change_log": "0013",
+      "mcu_md5": "91bc32577612ca638c1b653396a103d2",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/91bc32577612ca638c1b653396a103d2_mcu_dreame.scooter.p2223.bin?GalaxyAccessKeyId=5721718224520&Expires=1793808005445&Signature=d7BncJOll3U5+odwvZhGwRRa510=",
+      "mcu_version": "0013",
+      "md5": "7eaf140db8d763659c012c3f1b4573cd",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/7eaf140db8d763659c012c3f1b4573cd_upd_dreame.scooter.p2223.bin?GalaxyAccessKeyId=5721718224520&Expires=1793808005507&Signature=byAOaNjRQBda9nXqiTM9B8Pp6zQ=",
+      "time_out": 30,
+      "upload_time": 1669367113,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/7eaf140db8d763659c012c3f1b4573cd_upd_dreame.scooter.p2223.bin?GalaxyAccessKeyId=5721718224520&Expires=1793808005507&Signature=byAOaNjRQBda9nXqiTM9B8Pp6zQ=",
+      "version": "2.5.0_0011"
+    },
+    "model": "dreame.scooter.p2223",
+    "name": "NAVEE Electric Scooter S65"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1646359873864_VnPGVOZM1R5HBibe6rdPhsQnFTNxlaRc.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=R1oIESE3p6S3QrmLTBs1tbXERts="
+    },
+    "firmware": {
+      "changeLog": "\u00b7 Fix known issues\n\u00b7 Optimize user experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "\u00b7 Fix known issues",
+      "mcu_change_log": "\u00b7 Optimize user experience",
+      "mcu_md5": "083efd3080a972f2277705bcbd49912a",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/083efd3080a972f2277705bcbd49912a_mcu_dreame.scooter.p2301.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030413967&Signature=B/+y85myO13E4gCSvJn1uypBAkU=",
+      "mcu_version": "0017",
+      "md5": "696cf98818ff08e1c018fdb0d77c47c2",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/696cf98818ff08e1c018fdb0d77c47c2_upd_dreame.scooter.p2301.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030414091&Signature=YqrAWmmWF7qv4QTuoTaknD+0moQ=",
+      "time_out": 30,
+      "upload_time": 1713165008,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/696cf98818ff08e1c018fdb0d77c47c2_upd_dreame.scooter.p2301.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030414091&Signature=YqrAWmmWF7qv4QTuoTaknD+0moQ=",
+      "version": "2.5.3_0037"
+    },
+    "model": "dreame.scooter.p2301",
+    "name": "Xiaomi Electric Scooter 4 Ultra"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/599bc3fa3efe422322f1504046b9be06_1646359723937.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=JrshVyIG1389nrLTVC5BO0f9gEs="
+    },
+    "firmware": {
+      "changeLog": "1.1 Optimize known problems\n2.1 Experience Optimization",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "1.1 Optimize known problems",
+      "mcu_change_log": "2.1 Experience Optimization",
+      "mcu_md5": "bd0cc7f5fc29a72601d087f1f2bf4482",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/bd0cc7f5fc29a72601d087f1f2bf4482_mcu_dreame.scooter.p2301g.bin?GalaxyAccessKeyId=5721718224520&Expires=1803571202612&Signature=m4yERXbrJ3Gn54AKvFFaa1uMiiI=",
+      "mcu_version": "0019",
+      "md5": "81e1c7509d47dbec0462b9d4e1f4490a",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/81e1c7509d47dbec0462b9d4e1f4490a_upd_dreame.scooter.p2301g.bin?GalaxyAccessKeyId=5721718224520&Expires=1802793602313&Signature=eBsxUYsk1MgJ9YtyQor52ANiAz4=",
+      "time_out": 30,
+      "upload_time": 1725258227,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/81e1c7509d47dbec0462b9d4e1f4490a_upd_dreame.scooter.p2301g.bin?GalaxyAccessKeyId=5721718224520&Expires=1802793602313&Signature=eBsxUYsk1MgJ9YtyQor52ANiAz4=",
+      "version": "2.5.0_0009"
+    },
+    "model": "dreame.scooter.p2301g",
+    "name": "Xiaomi Electric Scooter 4 Ultra2"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1646359890594_RN0T9ew846xqOnlcPTQrh5LsP1UcJ2Fs.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=FezwqpZScrZrs+bjoEVx5mhDSyE="
+    },
+    "firmware": {
+      "changeLog": "0017\n\u00b7 Optimize user experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "0017",
+      "mcu_change_log": "\u00b7 Optimize user experience",
+      "mcu_md5": "ada2fc4bdfc90b1e1e3562f0e0a453c7",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/ada2fc4bdfc90b1e1e3562f0e0a453c7_mcu_dreame.scooter.t2201.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030414176&Signature=QWDQylEApP4DGgs4BWqlaqf+i7A=",
+      "mcu_version": "0013",
+      "md5": "88bbe93b94a16a7e9bcc186e81436f4f",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/88bbe93b94a16a7e9bcc186e81436f4f_upd_dreame.scooter.t2201.bin?GalaxyAccessKeyId=5721718224520&Expires=1793808008114&Signature=yF7cvCx7MMlrRAvuDR0w7neZgVA=",
+      "time_out": 30,
+      "upload_time": 1715852043,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/88bbe93b94a16a7e9bcc186e81436f4f_upd_dreame.scooter.t2201.bin?GalaxyAccessKeyId=5721718224520&Expires=1793808008114&Signature=yF7cvCx7MMlrRAvuDR0w7neZgVA=",
+      "version": "2.5.0_0017"
+    },
+    "model": "dreame.scooter.t2201",
+    "name": "Xiaomi Electric Scooter 4"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1768793314444_syQPFHO8APX51ts1ocdqw5GQkqtpfvY2.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=GZKjFjcU5ZUdJS7jnT3SfqllBBo="
+    },
+    "firmware": {
+      "changeLog": "\u00b7 Fix known issues\n0015",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "\u00b7 Fix known issues",
+      "mcu_change_log": "0015",
+      "mcu_md5": "6b9eae190003638289385870b946fc23",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/6b9eae190003638289385870b946fc23_mcu_navee1.scooter.t2208.bin?GalaxyAccessKeyId=5721718224520&Expires=1803398401977&Signature=Ozk/NTm7ZP49PNvDuQFkZxPMYwQ=",
+      "mcu_version": "0015",
+      "md5": "834f60cf7b1a01d30a83e670131b881d",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/834f60cf7b1a01d30a83e670131b881d_upd_navee1.scooter.t2208.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030410304&Signature=MaTCylbs2cIrk3BsDgq36uw+oPY=",
+      "time_out": 30,
+      "upload_time": 1684292207,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/834f60cf7b1a01d30a83e670131b881d_upd_navee1.scooter.t2208.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030410304&Signature=MaTCylbs2cIrk3BsDgq36uw+oPY=",
+      "version": "2.5.0_0014"
+    },
+    "model": "navee1.scooter.t2208",
+    "name": "NAVEE Electric Scooter V40"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1671155112325_nw72CEI4AgEzOVLmflEKy9UWJxZHrUft.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=40jZ8xrgtWjmvjQF6lq5PkbJey0="
+    },
+    "firmware": {
+      "changeLog": "0003\n0011",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "0003",
+      "mcu_change_log": "0011",
+      "mcu_md5": "532de05e62b535ea0be9e9c33c4881cd",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/532de05e62b535ea0be9e9c33c4881cd_mcu_navee1.scooter.t2209.bin?GalaxyAccessKeyId=5721718224520&Expires=1796054402657&Signature=pxePNYKYvR6jUzigu050Z2EmoPQ=",
+      "mcu_version": "0011",
+      "md5": "7cfd8d36e638e68198f3730486060463",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/7cfd8d36e638e68198f3730486060463_upd_navee1.scooter.t2209.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030409372&Signature=4pkNd6CTeEbG+Pb3y3A3eFYdt04=",
+      "time_out": 30,
+      "upload_time": 1669096952,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/7cfd8d36e638e68198f3730486060463_upd_navee1.scooter.t2209.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030409372&Signature=4pkNd6CTeEbG+Pb3y3A3eFYdt04=",
+      "version": "2.5.0_0003"
+    },
+    "model": "navee1.scooter.t2209",
+    "name": "Xiaomi Electric Scooter 42"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1671155127584_MIGBNbHuzRRBUmvt3mCcEmG1UGRZ81MX.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=MhIVvRfAxDktfyq31dCFfqKuZUI="
+    },
+    "firmware": {
+      "changeLog": "0006\n0011",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "0006",
+      "mcu_change_log": "0011",
+      "mcu_md5": "580443943c12ead91b1014a6031d0a43",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/580443943c12ead91b1014a6031d0a43_mcu_navee1.scooter.t2209g.bin?GalaxyAccessKeyId=5721718224520&Expires=1796227203703&Signature=b8AYu2UtZoA7JI9JsMuY3A6acEI=",
+      "mcu_version": "0011",
+      "md5": "4fedf555fe42ffad81125c7945f7032c",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/4fedf555fe42ffad81125c7945f7032c_upd_navee1.scooter.t2209g.bin?GalaxyAccessKeyId=5721718224520&Expires=1797177603328&Signature=06NoyHhxs8RBmGPfT+IKjyBtkHs=",
+      "time_out": 30,
+      "upload_time": 1673245469,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/4fedf555fe42ffad81125c7945f7032c_upd_navee1.scooter.t2209g.bin?GalaxyAccessKeyId=5721718224520&Expires=1797177603328&Signature=06NoyHhxs8RBmGPfT+IKjyBtkHs=",
+      "version": "2.5.0_0006"
+    },
+    "model": "navee1.scooter.t2209g",
+    "name": "Xiaomi Electric Scooter 43"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1671155124733_krdH2nVf9OTOoMjoF9GWkE87kDH8Oe0e.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=5GLMx0esFrhNdXnTeB+BkuSGpYo="
+    },
+    "firmware": {
+      "changeLog": "0003\n0009",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "0003",
+      "mcu_change_log": "0009",
+      "mcu_md5": "031db3627e17baafc1d9b9c2233a5f5e",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/031db3627e17baafc1d9b9c2233a5f5e_mcu_navee1.scooter.t2210.bin?GalaxyAccessKeyId=5721718224520&Expires=1796227203688&Signature=RLrXQAeCV8s/Y0u7YEyZaGfe1Xs=",
+      "mcu_version": "0009",
+      "md5": "9404c20e943f15a651d764ad2606314f",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/9404c20e943f15a651d764ad2606314f_upd_navee1.scooter.t2210.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030409375&Signature=9hKoufoqZwf0zEHR4DEla2YOTlU=",
+      "time_out": 30,
+      "upload_time": 1669096997,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/9404c20e943f15a651d764ad2606314f_upd_navee1.scooter.t2210.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030409375&Signature=9hKoufoqZwf0zEHR4DEla2YOTlU=",
+      "version": "2.5.0_0003"
+    },
+    "model": "navee1.scooter.t2210",
+    "name": "Xiaomi Electric Scooter 4 Lite"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1671155129331_iB39KNc9y2qAGC1Yk4QuqElQLMMc1zoB.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=pMf63r9vv/dpL9GMSgipPvn6Jbo="
+    },
+    "firmware": {
+      "changeLog": "\u00b7 Fix known issues\n0010",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "\u00b7 Fix known issues",
+      "mcu_change_log": "0010",
+      "mcu_md5": "f8f7593f9b88908eddef0e3e2e077831",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/f8f7593f9b88908eddef0e3e2e077831_mcu_navee1.scooter.t2210g.bin?GalaxyAccessKeyId=5721718224520&Expires=1797436802089&Signature=U2QPsikW7HdQ/GeXhe1zmAuFnRo=",
+      "mcu_version": "0010",
+      "md5": "b2b0f7ef5ec1922a166aa6477f802e02",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/b2b0f7ef5ec1922a166aa6477f802e02_upd_navee1.scooter.t2210g.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030414041&Signature=hfreqqp3uK0WZhWUmjQkOIHsPKw=",
+      "time_out": 30,
+      "upload_time": 1713144001,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/b2b0f7ef5ec1922a166aa6477f802e02_upd_navee1.scooter.t2210g.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030414041&Signature=hfreqqp3uK0WZhWUmjQkOIHsPKw=",
+      "version": "2.5.3_0010"
+    },
+    "model": "navee1.scooter.t2210g",
+    "name": "Xiaomi Electric Scooter 4 Lite2"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1676540706944_DI29HbLF82lzzuz8nMoBWwQztbcSqoie.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=jza8CN8wZTkez98vXD61naSfC5s="
+    },
+    "firmware": {
+      "changeLog": "\u00b7 Fix known issues\n0010",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "\u00b7 Fix known issues",
+      "mcu_change_log": "0010",
+      "mcu_md5": "f2e7334cc50abb8ac194d5e388ba6ee0",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/f2e7334cc50abb8ac194d5e388ba6ee0_mcu_navee1.scooter.t2211.bin?GalaxyAccessKeyId=5721718224520&Expires=1803398401982&Signature=bb2QEA0zFFOsXLhPbsyKQC3Bqcw=",
+      "mcu_version": "0010",
+      "md5": "90cab2691b2833f87abf77a4a4de3090",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/90cab2691b2833f87abf77a4a4de3090_upd_navee1.scooter.t2211.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030410307&Signature=rFeRkEKLmiD2FF1nfwP26g8xTzY=",
+      "time_out": 30,
+      "upload_time": 1684292803,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/90cab2691b2833f87abf77a4a4de3090_upd_navee1.scooter.t2211.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030410307&Signature=rFeRkEKLmiD2FF1nfwP26g8xTzY=",
+      "version": "2.5.0_0009"
+    },
+    "model": "navee1.scooter.t2211",
+    "name": "NAVEE Electric Scooter V50"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1768793321941_WHYMoOVC99f9ZhxvEGJfPh4tpz2N1Szy.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=seBpihUDMJMsRoRBJf85Uw1OorM="
+    },
+    "firmware": {
+      "changeLog": "\u00b7 Fix known issues\noptimize user experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "\u00b7 Fix known issues",
+      "mcu_change_log": "optimize user experience",
+      "mcu_md5": "abe95da726ca11a95902f322abe434dc",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/abe95da726ca11a95902f322abe434dc_mcu_navee1.scooter.t2214.bin?GalaxyAccessKeyId=5721718224520&Expires=1803398402087&Signature=x+DlUTwj24z7s+DOVzRPFakMEPY=",
+      "mcu_version": "0012",
+      "md5": "8b10bfa9181b5788afeac177692ecda6",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/8b10bfa9181b5788afeac177692ecda6_upd_navee1.scooter.t2214.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030410313&Signature=99Iw57SCaGVT/HueffESNrscPQg=",
+      "time_out": 30,
+      "upload_time": 1684294025,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/8b10bfa9181b5788afeac177692ecda6_upd_navee1.scooter.t2214.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030410313&Signature=99Iw57SCaGVT/HueffESNrscPQg=",
+      "version": "2.5.0_0008"
+    },
+    "model": "navee1.scooter.t2214",
+    "name": "NAVEE Electric Scooter S65C/D"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1663244702072_7i3TaDnZeJje9QnAjbvuzYhL95baFAq5.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=G2GLFwOcAE9qnwdrnhNxjy2m8Zg="
+    },
+    "firmware": {
+      "changeLog": "1\u3001",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "1\u3001",
+      "mcu_change_log": "",
+      "md5": "9d716898e58d92675b1867e08bfa8959",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/9d716898e58d92675b1867e08bfa8959_upd_ninebot.scooter.15.bin?GalaxyAccessKeyId=5721718224520&Expires=1797350402424&Signature=Egzs3hJ88Ymn9L7oKXYCKquEe08=",
+      "time_out": 30,
+      "upload_time": 1719812979,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/9d716898e58d92675b1867e08bfa8959_upd_ninebot.scooter.15.bin?GalaxyAccessKeyId=5721718224520&Expires=1797350402424&Signature=Egzs3hJ88Ymn9L7oKXYCKquEe08=",
+      "version": "015.037.108_0003"
+    },
+    "model": "ninebot.scooter.15",
+    "name": "Xiaomi Electric Scooter 4 Pro"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1768556932251_NamysM5vTOfTrXK0RJKdpDTl3zdqAYTG.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=5AJPVdyBMUjbWlxNMAh8sZN72iA="
+    },
+    "firmware": {
+      "changeLog": "",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "",
+      "mcu_change_log": "",
+      "md5": "3178d55a2dfaa284262eee3b17b8bb94",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/3178d55a2dfaa284262eee3b17b8bb94_upd_ninebot.scooter.v1.bin?GalaxyAccessKeyId=5721718224520&Expires=1796832002254&Signature=/xGbuzUAGS8s+PyDKu0CW9VedCs=",
+      "time_out": 30,
+      "upload_time": 1602656570,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/3178d55a2dfaa284262eee3b17b8bb94_upd_ninebot.scooter.v1.bin?GalaxyAccessKeyId=5721718224520&Expires=1796832002254&Signature=/xGbuzUAGS8s+PyDKu0CW9VedCs=",
+      "version": "1.1.1_141_171_129_126"
+    },
+    "model": "ninebot.scooter.v1",
+    "name": "Electric Scooter"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/1cc5e3b32769d3d1372264354bc060a4_1668415839783.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=Wg2R3fQoIytQ4rjZGQ0j+UZh1Ro="
+    },
+    "firmware": {
+      "changeLog": "Fix known issues and optimize experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "Fix known issues and optimize experience",
+      "mcu_change_log": "",
+      "md5": "2f57d886540b2255574215f8125ea7cc",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/2f57d886540b2255574215f8125ea7cc_upd_ninebot.scooter.v13.bin?GalaxyAccessKeyId=5721718224520&Expires=1804003202141&Signature=vAJ+65dg7aE+3U8jtPpPdf9ZC0w=",
+      "time_out": 30,
+      "upload_time": 1680076389,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/2f57d886540b2255574215f8125ea7cc_upd_ninebot.scooter.v13.bin?GalaxyAccessKeyId=5721718224520&Expires=1804003202141&Signature=vAJ+65dg7aE+3U8jtPpPdf9ZC0w=",
+      "version": "121.112.0_0003"
+    },
+    "model": "ninebot.scooter.v13",
+    "name": "Xiaomi Electric Scooter 4 Go"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1684233908211_SsskJMLSe71NQ5pqXnY4e9MXVuHINqbW.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=bqkQWSKswHCVlLYhHajrbr5lyJ0="
+    },
+    "firmware": {
+      "changeLog": "1. Battery firmware update 2. New German AX version",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "1. Battery firmware update 2. New German AX version",
+      "mcu_change_log": "",
+      "md5": "f4fa6090849bb0ab0cb6643ddd35353d",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/f4fa6090849bb0ab0cb6643ddd35353d_upd_ninebot.scooter.v16.bin?GalaxyAccessKeyId=5721718224520&Expires=1795881602129&Signature=4IJ4vNHMZPJHbIs6tUgiNkgS9Gg=",
+      "time_out": 30,
+      "upload_time": 1702887419,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/f4fa6090849bb0ab0cb6643ddd35353d_upd_ninebot.scooter.v16.bin?GalaxyAccessKeyId=5721718224520&Expires=1795881602129&Signature=4IJ4vNHMZPJHbIs6tUgiNkgS9Gg=",
+      "version": "037.118.123_0004"
+    },
+    "model": "ninebot.scooter.v16",
+    "name": "Xiaomi Electric Scooter 4 Pro Plus"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/ae660566d2bdabae5948e28c76c84928_1695726530868.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=LziMXypUURXg9G3A+PcS1/V/RYM="
+    },
+    "firmware": {
+      "changeLog": "Optimizing the Display Effect of Tail Lights in Vehicle-Pedestrian Regulation System in France",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "Optimizing the Display Effect of Tail Lights in Vehicle-Pedestrian Regulation System in France",
+      "mcu_change_log": "",
+      "md5": "8443d984969cd03d1ce3a480e3441d42",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/8443d984969cd03d1ce3a480e3441d42_upd_ninebot.scooter.v17.bin?GalaxyAccessKeyId=5721718224520&Expires=1794931202013&Signature=sd19Jvu/GHAGWmcZCGEQmpDTqO8=",
+      "time_out": 30,
+      "upload_time": 1732863777,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/8443d984969cd03d1ce3a480e3441d42_upd_ninebot.scooter.v17.bin?GalaxyAccessKeyId=5721718224520&Expires=1794931202013&Signature=sd19Jvu/GHAGWmcZCGEQmpDTqO8=",
+      "version": "038.023.127_0005"
+    },
+    "model": "ninebot.scooter.v17",
+    "name": "Xiaomi Electric Scooter 4 Pro Max"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1768557271311_vVt7kB7tDhsE6YoTtWx4At2lj6HnYFhd.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=F47ix4d4EGcnLR0HhmRvN8B5nt8="
+    },
+    "firmware": {
+      "changeLog": "",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "",
+      "mcu_change_log": "",
+      "md5": "a35d62c55d6730dff59a8b8b1f1d4dca",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/a35d62c55d6730dff59a8b8b1f1d4dca_upd_ninebot.scooter.v2.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030402370&Signature=56Z+3Zmnfku4ytasknipi2163Nw=",
+      "time_out": 30,
+      "upload_time": 1574653109,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/a35d62c55d6730dff59a8b8b1f1d4dca_upd_ninebot.scooter.v2.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030402370&Signature=56Z+3Zmnfku4ytasknipi2163Nw=",
+      "version": "1.1.0_152_168_110_126"
+    },
+    "model": "ninebot.scooter.v2",
+    "name": "Mi Electric Scooter Pro"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0.fds.api.mi-img.com/miio.files/developer_1564657488plap7adz.png"
+    },
+    "firmware": {
+      "changeLog": "1.Improve vehicle safety\n2.Fix known problems and optimize the experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "1.Improve vehicle safety\n2.Fix known problems and optimize the experience",
+      "mcu_change_log": "",
+      "md5": "e2cfe2637b280ae9ce0b62862c5fca49",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/e2cfe2637b280ae9ce0b62862c5fca49_upd_ninebot.scooter.v3.bin?GalaxyAccessKeyId=5721718224520&Expires=9223372036854775807&Signature=B6+tPHD8of3vyRb1mFjTQra0pPE=",
+      "time_out": 30,
+      "upload_time": 1645265648,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/e2cfe2637b280ae9ce0b62862c5fca49_upd_ninebot.scooter.v3.bin?GalaxyAccessKeyId=5721718224520&Expires=9223372036854775807&Signature=B6+tPHD8of3vyRb1mFjTQra0pPE=",
+      "version": "1.1.0_321_157_141"
+    },
+    "model": "ninebot.scooter.v3",
+    "name": "Mi Electric Scooter 1S"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1571909814378wrGEhiWg.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=OEhXTqbpU4roCxQjRzB9xqs/nRw="
+    },
+    "firmware": {
+      "changeLog": "Fix known problems and optimize the experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "Fix known problems and optimize the experience",
+      "mcu_change_log": "",
+      "md5": "41a9ab6c7dad53b27930d28103437d4f",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/41a9ab6c7dad53b27930d28103437d4f_upd_ninebot.scooter.v4.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030408630&Signature=v/93W6WPn8YMOBCq3LNIjacDMb4=",
+      "time_out": 30,
+      "upload_time": 1667200036,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/41a9ab6c7dad53b27930d28103437d4f_upd_ninebot.scooter.v4.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030408630&Signature=v/93W6WPn8YMOBCq3LNIjacDMb4=",
+      "version": "1.1.0_252_158_1102"
+    },
+    "model": "ninebot.scooter.v4",
+    "name": "Mi Electric Scooter Pro 2 series"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0.fds.api.mi-img.com/miio.files/developer_15790847567h3w6h35.png"
+    },
+    "firmware": {
+      "changeLog": "Fix known problems and optimize the experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "Fix known problems and optimize the experience",
+      "mcu_change_log": "",
+      "md5": "cd3a4c8183ce20c02a96a2f747fa6fa6",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/cd3a4c8183ce20c02a96a2f747fa6fa6_upd_ninebot.scooter.v5.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030408624&Signature=yHZQS5sTaCVYY8PyiPpG5HFVBjc=",
+      "time_out": 30,
+      "upload_time": 1667195442,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/cd3a4c8183ce20c02a96a2f747fa6fa6_upd_ninebot.scooter.v5.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030408624&Signature=yHZQS5sTaCVYY8PyiPpG5HFVBjc=",
+      "version": "1.1.0_245_137_141"
+    },
+    "model": "ninebot.scooter.v5",
+    "name": "Mi Electric Scooter Essential"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cnbj1.fds.api.xiaomi.com/iotweb-product-center/96150d58b1c3c40bb7fbd6a441375643_\u7c73\u5bb6\u4e09\u4ee3\u6df1\u8272168.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=w+8bDkQVrL4ud8CBsJBgFmICE5g="
+    },
+    "firmware": {
+      "changeLog": "1. Improve firmware data security",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "1. Improve firmware data security",
+      "mcu_change_log": "",
+      "md5": "7e9ab679ae2e0425792a0c0f0250ce4c",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/7e9ab679ae2e0425792a0c0f0250ce4c_upd_ninebot.scooter.v7.bin?GalaxyAccessKeyId=5721718224520&Expires=9223372036854775807&Signature=XHsGboJ7YF+AAQFwXwQg0TMwv1M=",
+      "time_out": 30,
+      "upload_time": 1660013893,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/7e9ab679ae2e0425792a0c0f0250ce4c_upd_ninebot.scooter.v7.bin?GalaxyAccessKeyId=5721718224520&Expires=9223372036854775807&Signature=XHsGboJ7YF+AAQFwXwQg0TMwv1M=",
+      "version": "017.157.141_0001"
+    },
+    "model": "ninebot.scooter.v7",
+    "name": "Mi Electric Scooter 3"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/71682d11a56d7d30b8f68671def15e8a_1639453019699.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=opgErpiKhCqiVGX/HHqHVZHzvvE="
+    },
+    "firmware": {
+      "changeLog": "adjust the battery European regulations related content",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "adjust the battery European regulations related content",
+      "mcu_change_log": "",
+      "md5": "8cb20e3e26200f7ff4cb6f49d42f30c8",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/8cb20e3e26200f7ff4cb6f49d42f30c8_upd_ninebot.scooter.v8.bin?GalaxyAccessKeyId=5721718224520&Expires=1797350402451&Signature=JhNEM+JG3O2Y0pzEh5uv4qAjfi8=",
+      "time_out": 30,
+      "upload_time": 1719814119,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/8cb20e3e26200f7ff4cb6f49d42f30c8_upd_ninebot.scooter.v8.bin?GalaxyAccessKeyId=5721718224520&Expires=1797350402451&Signature=JhNEM+JG3O2Y0pzEh5uv4qAjfi8=",
+      "version": "022.028.108_0002"
+    },
+    "model": "ninebot.scooter.v8",
+    "name": "Xiaomi Electric Scooter 4 Pro2"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1590470076744371hMCmp.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=qFWGT+YiqJWzi8GgnueU5K5IqJU="
+    },
+    "firmware": {
+      "changeLog": "",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "",
+      "mcu_change_log": "",
+      "md5": "7e43e7c35041d36f7780a58e9f57e201",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/7e43e7c35041d36f7780a58e9f57e201_upd_qicyc.bike.xmdzlzxc01qj.bin?GalaxyAccessKeyId=5721718224520&Expires=1799769601668&Signature=34oGM87z5R1ycK5Q6T99DMfY5ek=",
+      "time_out": 30,
+      "upload_time": 1588930054,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/7e43e7c35041d36f7780a58e9f57e201_upd_qicyc.bike.xmdzlzxc01qj.bin?GalaxyAccessKeyId=5721718224520&Expires=1799769601668&Signature=34oGM87z5R1ycK5Q6T99DMfY5ek=",
+      "version": "1.0.0_0703"
+    },
+    "model": "qicyc.bike.xmdzlzxc01qj",
+    "name": "Mi Smart Electric Folding Bike"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/2df49226c19bcfc7fe789c452334f575_1716435316363.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=iVNrAd8wpvMaUlItIMZXefD52+U="
+    },
+    "firmware": {
+      "changeLog": "1.1 Fixed known bugs \n2.1 Optimized user experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "1.1 Fixed known bugs ",
+      "mcu_change_log": "2.1 Optimized user experience",
+      "mcu_md5": "10755810f046ae62e16baca2ef0eb1a5",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/10755810f046ae62e16baca2ef0eb1a5_mcu_xiaomi.scooter.0005.bin?GalaxyAccessKeyId=5721718224520&Expires=1794758402388&Signature=May1UsYgpjtm4+UUuQH3LFUOWq4=",
+      "mcu_version": "0015",
+      "md5": "c3899d85efe817f251a6844bcf01c997",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/c3899d85efe817f251a6844bcf01c997_upd_xiaomi.scooter.0005.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030417384&Signature=6zqRrvJ8lmJZwJGdfzdrho/f3FM=",
+      "time_out": 30,
+      "upload_time": 1729752460,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/c3899d85efe817f251a6844bcf01c997_upd_xiaomi.scooter.0005.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030417384&Signature=6zqRrvJ8lmJZwJGdfzdrho/f3FM=",
+      "version": "2.7.0_0015"
+    },
+    "model": "xiaomi.scooter.0005",
+    "name": "Xiaomi Electric Scooter 5"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/057c946891d4ee202414d8474fec1539_1716791693124.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=rcGUe85q92xQG48gBxAMgwSBnU8="
+    },
+    "firmware": {
+      "changeLog": " 1.1 Fixed known bugs\n2.1 Optimized user experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": " 1.1 Fixed known bugs",
+      "mcu_change_log": "2.1 Optimized user experience",
+      "mcu_md5": "370dbaba96a88d7f4dd7bc8d7aafd78b",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/370dbaba96a88d7f4dd7bc8d7aafd78b_mcu_xiaomi.scooter.5max.bin?GalaxyAccessKeyId=5721718224520&Expires=1794758402402&Signature=dRrfjBolfe2ehBtqY+OpKBnqa4w=",
+      "mcu_version": "0016",
+      "md5": "f7e136e672837fcb05764f89ba808a35",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/f7e136e672837fcb05764f89ba808a35_upd_xiaomi.scooter.5max.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030417381&Signature=COvROzNHvfRrLAorODR5dJHfPhA=",
+      "time_out": 30,
+      "upload_time": 1729752252,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/f7e136e672837fcb05764f89ba808a35_upd_xiaomi.scooter.5max.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030417381&Signature=COvROzNHvfRrLAorODR5dJHfPhA=",
+      "version": "2.7.0_0015"
+    },
+    "model": "xiaomi.scooter.5max",
+    "name": "Xiaomi Electric Scooter 5 Max"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/b8e00a9839f6c7649a16f485135f88c7_1734486752334.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=hsj6hHVSPXDCyncPk+HIyEBVs9o="
+    },
+    "firmware": {
+      "changeLog": "1. Fixed some known issues.\n2. Optimized user experience.",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "1. Fixed some known issues.",
+      "mcu_change_log": "2. Optimized user experience.",
+      "mcu_md5": "03a6dc25ae8b4a2a9ee89be080536500",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/signed_03a6dc25ae8b4a2a9ee89be080536500_mcu_xiaomi.scooter.5plus.bin?GalaxyAccessKeyId=5721718224520&Expires=9223372036854775807&Signature=skezbuE1RQbK5bpyDIP3nRStaL4=",
+      "mcu_version": "0035",
+      "md5": "6045191d7d1c4581caccaa787fd4d607",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/6045191d7d1c4581caccaa787fd4d607_upd_xiaomi.scooter.5plus.bin?GalaxyAccessKeyId=5721718224520&Expires=1796313602675&Signature=WzUVQ1Grt53NAGwolannuCW3U5M=",
+      "time_out": 30,
+      "upload_time": 1749806160,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/6045191d7d1c4581caccaa787fd4d607_upd_xiaomi.scooter.5plus.bin?GalaxyAccessKeyId=5721718224520&Expires=1796313602675&Signature=WzUVQ1Grt53NAGwolannuCW3U5M=",
+      "version": "2.7.0_0039"
+    },
+    "model": "xiaomi.scooter.5plus",
+    "name": "Xiaomi Electric Scooter 5 Plus"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/56562996bc9cc8fa41be9e03c79b0dbe_1716435119279.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=Ok3yP5tc7PeIZikjTbf3IO2FEaM="
+    },
+    "firmware": {
+      "changeLog": "1.1 Fixed known bugs \n2.1 Optimized user experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "1.1 Fixed known bugs ",
+      "mcu_change_log": "2.1 Optimized user experience",
+      "mcu_md5": "aabaad0de541d7c79ca24d28c45ba097",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/aabaad0de541d7c79ca24d28c45ba097_mcu_xiaomi.scooter.5pro.bin?GalaxyAccessKeyId=5721718224520&Expires=1793030416680&Signature=2vDUIQBk1wfxAXvepHorhfTURps=",
+      "mcu_version": "0007",
+      "md5": "1c76ba994d8326dca0203a424dc09ff6",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/1c76ba994d8326dca0203a424dc09ff6_upd_xiaomi.scooter.5pro.bin?GalaxyAccessKeyId=5721718224520&Expires=1793808008844&Signature=AP5b8GiKqcULckTBgj7Qohosk3s=",
+      "time_out": 30,
+      "upload_time": 1731048795,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/1c76ba994d8326dca0203a424dc09ff6_upd_xiaomi.scooter.5pro.bin?GalaxyAccessKeyId=5721718224520&Expires=1793808008844&Signature=AP5b8GiKqcULckTBgj7Qohosk3s=",
+      "version": "2.7.0_0015"
+    },
+    "model": "xiaomi.scooter.5pro",
+    "name": "Xiaomi Electric Scooter 5 Pro"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1757928904358_HdDx3JDnncuOMoudsCNFdjsTK95HWaSP.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=2VijUvgPUAqhINsQtfBpmY4zX8A="
+    },
+    "firmware": {
+      "changeLog": "\u2022 Fixed some known issues.\n\u2022 Optimized user experience.",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "\u2022 Fixed some known issues.",
+      "mcu_change_log": "\u2022 Optimized user experience.",
+      "mcu_md5": "7e6e02cafdf7d70171d0e9ed01705a85",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/7e6e02cafdf7d70171d0e9ed01705a85_mcu_xiaomi.scooter.6.bin?GalaxyAccessKeyId=5721718224520&Expires=1797335125009&Signature=TAJAuVjDhZ2JUVoRAWgn9G121jY=",
+      "mcu_version": "0115",
+      "md5": "f94a863d5183d1d94c00f8e8ca1679ce",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/f94a863d5183d1d94c00f8e8ca1679ce_upd_xiaomi.scooter.6.bin?GalaxyAccessKeyId=5721718224520&Expires=1797332965782&Signature=PO7tjz8yg77VmBJDuAnSy2nP0Lc=",
+      "time_out": 30,
+      "upload_time": 1781780965,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/f94a863d5183d1d94c00f8e8ca1679ce_upd_xiaomi.scooter.6.bin?GalaxyAccessKeyId=5721718224520&Expires=1797332965782&Signature=PO7tjz8yg77VmBJDuAnSy2nP0Lc=",
+      "version": "2.7.0_0027"
+    },
+    "model": "xiaomi.scooter.6",
+    "name": "Xiaomi Electric Scooter 6"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1757905505219_dFmnSki68RIkefgyUdcnwyfjhsZEhvfy.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=6Z9vZpZl90d07JCp0bDQNJp/eKI="
+    },
+    "firmware": {
+      "changeLog": "\u2022 Fixed some known issues.\n\u2022 Optimized user experience.",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "\u2022 Fixed some known issues.",
+      "mcu_change_log": "\u2022 Optimized user experience.",
+      "mcu_md5": "34da315e27ced3ad5a737830870254b1",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/34da315e27ced3ad5a737830870254b1_mcu_xiaomi.scooter.6lite.bin?GalaxyAccessKeyId=5721718224520&Expires=1810915202055&Signature=LFkeDCqOPFygYw/n328H0AuSfv4=",
+      "mcu_version": "0128",
+      "md5": "333b9659c8df5f6d4cc17ce07e17effc",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/333b9659c8df5f6d4cc17ce07e17effc_upd_xiaomi.scooter.6lite.bin?GalaxyAccessKeyId=5721718224520&Expires=1810915202045&Signature=gSIHgZvoTz0FrF/g9Yhs1zcgeXk=",
+      "time_out": 30,
+      "upload_time": 1764387496,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/333b9659c8df5f6d4cc17ce07e17effc_upd_xiaomi.scooter.6lite.bin?GalaxyAccessKeyId=5721718224520&Expires=1810915202045&Signature=gSIHgZvoTz0FrF/g9Yhs1zcgeXk=",
+      "version": "2.7.0_0026"
+    },
+    "model": "xiaomi.scooter.6lite",
+    "name": "Xiaomi Electric Scooter 6 Lite"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/cb6acb8b635fd1a889cfd63c66a51a62_1749602395802.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=WknEITNVn+Pn67CIf+AMJTTAZ7I="
+    },
+    "firmware": {
+      "changeLog": "\u2022 Fixed some known issues.\n\u2022 Optimized user experience.",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "\u2022 Fixed some known issues.",
+      "mcu_change_log": "\u2022 Optimized user experience.",
+      "mcu_md5": "c08dcbc9ad13f3ad827ed533f63cddda",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/c08dcbc9ad13f3ad827ed533f63cddda_mcu_xiaomi.scooter.6pro.bin?GalaxyAccessKeyId=5721718224520&Expires=1784705852728&Signature=+WYa17xgSFQQxWbdl++lmW9KJDU=",
+      "mcu_version": "0051",
+      "md5": "6e74e1081d98fdefa32400931ebbd6a1",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/6e74e1081d98fdefa32400931ebbd6a1_upd_xiaomi.scooter.6pro.bin?GalaxyAccessKeyId=5721718224520&Expires=1785751121822&Signature=XVVwFu3isJKrQmjjRqxptERRE38=",
+      "time_out": 30,
+      "upload_time": 1770199121,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/6e74e1081d98fdefa32400931ebbd6a1_upd_xiaomi.scooter.6pro.bin?GalaxyAccessKeyId=5721718224520&Expires=1785751121822&Signature=XVVwFu3isJKrQmjjRqxptERRE38=",
+      "version": "2.7.0_0050"
+    },
+    "model": "xiaomi.scooter.6pro",
+    "name": "Xiaomi Electric Scooter 6 Pro"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/444d28434370a00999cde7ea6f345ba1_1720592277863.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=sVtgkpDWvZew2+zWTpw+Q9KyeqM="
+    },
+    "firmware": {
+      "changeLog": "1. Fixed some known issues.\n2. Optimized user experience.",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "1. Fixed some known issues.",
+      "mcu_change_log": "2. Optimized user experience.",
+      "mcu_md5": "d23740b5a67dbdffe165700eb47d7e46",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/signed_d23740b5a67dbdffe165700eb47d7e46_mcu_xiaomi.scooter.elite.bin?GalaxyAccessKeyId=5721718224520&Expires=9223372036854775807&Signature=+hFf8QyPrvVhfHO/zODIVHanSDQ=",
+      "mcu_version": "0135",
+      "md5": "844824457968a40be0226550d6182c39",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/844824457968a40be0226550d6182c39_upd_xiaomi.scooter.elite.bin?GalaxyAccessKeyId=5721718224520&Expires=1793289601870&Signature=dqn2lunIBX3FyZuSA9yDgL7d47s=",
+      "time_out": 180,
+      "upload_time": 1746786362,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/844824457968a40be0226550d6182c39_upd_xiaomi.scooter.elite.bin?GalaxyAccessKeyId=5721718224520&Expires=1793289601870&Signature=dqn2lunIBX3FyZuSA9yDgL7d47s=",
+      "version": "2.6.0_0041"
+    },
+    "model": "xiaomi.scooter.elite",
+    "name": "Xiaomi Electric Scooter Elite"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/developer_1697099110045_7CbOAkcE7R162omtPUqRBhM124ydBPjv.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=5tEiaV79FwpO0L3Lg6T4ldFOdts="
+    },
+    "firmware": {
+      "changeLog": "1. Optimize OTA upgrades\n2. Optimize 10 fault alarm display\n1. Modify the controller to protect the battery from high temperature\n2. Add 21 fault code",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "1. Optimize OTA upgrades\n2. Optimize 10 fault alarm display",
+      "mcu_change_log": "1. Modify the controller to protect the battery from high temperature\n2. Add 21 fault code",
+      "mcu_md5": "ac93c2a8bd46adebf187b4c4831a31d1",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/signed_ac93c2a8bd46adebf187b4c4831a31d1_mcu_xiaomi.scooter.lq4lp.bin?GalaxyAccessKeyId=5721718224520&Expires=9223372036854775807&Signature=hGjeV5c0AhH9CAdQtDHsQU+N5Eo=",
+      "mcu_version": "0114",
+      "md5": "2d3fe55a9abd71cdb983fdc36f71d9af",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/2d3fe55a9abd71cdb983fdc36f71d9af_upd_xiaomi.scooter.lq4lp.bin?GalaxyAccessKeyId=5721718224520&Expires=1795968002867&Signature=CjneE2aoP/Ss9scFkqZyVRlrOTU=",
+      "time_out": 180,
+      "upload_time": 1718446138,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/2d3fe55a9abd71cdb983fdc36f71d9af_upd_xiaomi.scooter.lq4lp.bin?GalaxyAccessKeyId=5721718224520&Expires=1795968002867&Signature=CjneE2aoP/Ss9scFkqZyVRlrOTU=",
+      "version": "2.6.0_0054"
+    },
+    "model": "xiaomi.scooter.lq4lp",
+    "name": "Xiaomi Electric Scooter 4 Lite (2nd Gen)"
+  },
+  {
+    "extra": {
+      "imageMin": "https://cdn.awsde0-fusion.fds.api.mi-img.com/iotweb-product-center/7c85dedc347da78d330ff5ae874dcfaa_1691652893073.png?GalaxyAccessKeyId=AKVGLQWBOVIRQ3XLEW&Expires=9223372036854775807&Signature=QiEKLc4nvrgci7GRE2uCZx13nJ4="
+    },
+    "firmware": {
+      "changeLog": "\u00b7 Fix known issues\n\u00b7 Optimize user experience",
+      "diff_md5": "",
+      "diff_safe_url": "",
+      "diff_url": "",
+      "force": false,
+      "fw_change_log": "\u00b7 Fix known issues",
+      "mcu_change_log": "\u00b7 Optimize user experience",
+      "mcu_md5": "83ca1d23efe93e0858feff38c6ff5560",
+      "mcu_safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/83ca1d23efe93e0858feff38c6ff5560_mcu_xiaomi.scooter.t2336.bin?GalaxyAccessKeyId=5721718224520&Expires=1795622402328&Signature=EIWEgu/Mt0/DpR6ZVOeQl3orbVs=",
+      "mcu_version": "0010",
+      "md5": "7aa8fdd7d99bd4c2c82e82741acb79fb",
+      "rec": false,
+      "safe_url": "https://fk-res-abroad-cdn.home.mi.com/default/7aa8fdd7d99bd4c2c82e82741acb79fb_upd_xiaomi.scooter.t2336.bin?GalaxyAccessKeyId=5721718224520&Expires=1795881602164&Signature=V6eqjEFY71FcmgQ3KiID04rHETE=",
+      "time_out": 30,
+      "upload_time": 1718354291,
+      "url": "https://fk-res-abroad-cdn.home.mi.com/default/7aa8fdd7d99bd4c2c82e82741acb79fb_upd_xiaomi.scooter.t2336.bin?GalaxyAccessKeyId=5721718224520&Expires=1795881602164&Signature=V6eqjEFY71FcmgQ3KiID04rHETE=",
+      "version": "2.5.3_0015"
+    },
+    "model": "xiaomi.scooter.t2336",
+    "name": "Xiaomi Electric Scooter 4 Pro (2nd Gen)"
+  },
+  {
+    "model": 9901,
+    "name": "NAVEE S2 (9901)",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/27/97d5ace5dbab4ad690187ce1907dc913.bin",
+      "version": "2.0.0.1",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/27/380cd2178fdb46a1a33d446c10e1e85e.bin",
+      "mcu_version": "0.0.0.1",
+      "bms_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/27/0f20ca9c759a45189655db55cc47e7a6.bin",
+      "bms_version": "3.0.0.0"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/10/11/4e7626d97c30454db8cfda47d443683b.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/10/11/f24bd5026f01454ba87d23f8e3fa8cf0.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/10/11/80eeb8a84be849c7b86a58a790fb9fa4.pdf"
+    }
+  },
+  {
+    "model": 9701,
+    "name": "NAVEE NT5 Max (9701)",
+    "firmware": {
+      "changeLog": "Fix known issues",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/12/12/2996148ed0c0470bbdf12db41498e882.bin",
+      "version": "3.0.0.3"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/11/14/3606b61454f14a16a7377d92ab121c7b.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/11/14/4653f115c9a44750b7a60838208412a6.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/19/2b5d2de9504a4e078b4ccd54bd97ff9d.pdf"
+    }
+  },
+  {
+    "model": 9501,
+    "name": "NAVEE NT5 Ultra X",
+    "firmware": {
+      "changeLog": "Fix known issues",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/12/12/50640f32b67e49a2bb068742373d3c7e.bin",
+      "version": "3.0.0.3"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/11/14/a1749fe08e0a4b4faf178dc0b754f1cb.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/11/14/8fd483c997f14cdbb72a9ea0596ec44d.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/10/6b103fbc7802435ca767c0dfe73b6965.pdf"
+    }
+  },
+  {
+    "model": 9301,
+    "name": "NAVEE NT5 Max (9301)",
+    "firmware": {
+      "changeLog": "Fix known issues",
+      "bms_safe_url": "https://myusnavee.s3.amazonaws.com/2025/12/22/c75cfacff2554c7e81bc5d2f8b762cb9.bin",
+      "bms_version": "1.0.1.4"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/11/14/0655eb3c9f8c4c14838d36599e2a7e7f.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/11/14/8e6fa5931ac74e6f82157a75fb65c0ef.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/10/94f47ac5c0b24629885ba0decbc67859.pdf"
+    }
+  },
+  {
+    "model": 8501,
+    "name": "NAVEE GT5 Max",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/11/10/20409137f0e343e3952f32b2b5d312c5.bin",
+      "version": "0.0.0.5",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/28/2e661dfc59f2443e9ac253f80e6fa33a.bin",
+      "mcu_version": "0.0.1.1"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/11/20/78da1c035e874624ab45b276cdbac7fd.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/11/20/1431516176ba4666834fb3172f063854.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/12/02/4e5f856836ee4c0f9d53a6227f2bf619.pdf"
+    }
+  },
+  {
+    "model": 8401,
+    "name": "NAVEE GT5 Pro",
+    "firmware": {
+      "changeLog": "Formal",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/11/10/ab474c0791774ff89c784bfcd01bc76b.bin",
+      "version": "0.0.0.5",
+      "bms_safe_url": "https://myusnavee.s3.amazonaws.com/2025/12/18/218edf76bde6441b8a313d3fd5e9794f.bin",
+      "bms_version": "1.0.1.4"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/11/20/beaad6b8907c4a7b9d5be95caeca9b71.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/11/20/b65d9490d17b45209066049d325a7013.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/12/02/e48ac8376c81498185fc9ba27169fc09.pdf"
+    }
+  },
+  {
+    "model": 6001,
+    "name": "NAVEE N65i II",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/11/10/d145593236204a15961cd0700c3ad073.bin",
+      "version": "2.0.5.3",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/20/5b7b49a19e5b43d196b3f792a4344a4d.bin",
+      "mcu_version": "0.0.0.5"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/07/09/856ae7abb0df4a29a77e9fc4eee8395f.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/07/09/4126da9f0abf4b0b9291ac19e60486f3.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/10/14/598d844af0074ab1950bc46ceec4dc8f.pdf"
+    }
+  },
+  {
+    "model": 5901,
+    "name": "NAVEE XT5 Max",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/11/10/4a3f2f8e82c041abb8f1437b3c79c4bd.bin",
+      "version": "2.0.2.8",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/11/10/62f16f401189432fb05f0eaf3cfa1d35.bin",
+      "mcu_version": "0.0.1.0"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/08/19/076d7434b8124a96b00f69aaf52516cc.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/08/19/73c9f78b2e384e17abf911e20f98e430.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/10/20/f48a8cccc6f14d3a9c8d64ca0cfbff8a.pdf"
+    }
+  },
+  {
+    "model": 5801,
+    "name": "NAVEE XT5 Ultra",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/11/10/9d1c9f581fb84ea9aad99d94421ed5c4.bin",
+      "version": "2.0.2.8",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/08/26/14840ab300904ff196cf38bb6aeff481.bin",
+      "mcu_version": "0.0.2.3"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/08/19/97bf4bb76483410b963b4ec80c4e5939.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/08/19/e28a71d8abbb48b69c5493d0d46fdc8b.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/10/20/a7e1b949717f448a8829b7b62479a6ed.pdf"
+    }
+  },
+  {
+    "model": 5701,
+    "name": "NAVEE G5 MAX",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/09/25/d2b5a5a5d9a24060bb1b12839eaa3c73.bin",
+      "version": "2.0.5.2",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/07/05/375628672694484c970ffbf9d2fc92ef.bin",
+      "mcu_version": "0.0.0.5",
+      "bms_safe_url": "https://myusnavee.s3.amazonaws.com/2025/06/26/ae518f52581b44188d28b4cbe2546b20.bin",
+      "bms_version": "3.1.0.1"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/07/10/1f3dab682ae34631a6be413fb7b2986e.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/07/10/565f14a69b794d9bbe70d47283c0478c.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/15/1ddcdb5d82ca4260959b936a52ae6d8b.pdf"
+    }
+  },
+  {
+    "model": 5601,
+    "name": "NAVEE G5 pro",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/09/25/919cdc3a66b84a08bd9e7f69f1409c06.bin",
+      "version": "2.0.5.2",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/07/05/d02d169308b34bd28c7f46ed764d2c2f.bin",
+      "mcu_version": "0.0.0.3",
+      "bms_safe_url": "https://myusnavee.s3.amazonaws.com/2025/06/26/e4527f229f0348f88e901d38746e94d8.bin",
+      "bms_version": "3.1.0.1"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/07/10/ae02f804dc154ecbb3c24072aedcc7d2.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/07/10/012b0d993940459ba11353b6f0c3ca72.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/15/2bc68bad5cd945d8bac2daabe7740d3f.pdf"
+    }
+  },
+  {
+    "model": 5501,
+    "name": "NAVEE Birdie 3x",
+    "firmware": {
+      "changeLog": "Optimize the user experience of the implementation mode",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/22/e0f22d1b576c44738b8a0bf6c4737834.bin",
+      "version": "2.0.1.2",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/15/b95acccda4b046cb926dbb8ff06d5b54.bin",
+      "mcu_version": "0.0.2.8"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/04/27/79f389fa2a3f47248f24645edece3a80.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/04/27/af6af81e7e744d9987e31568b8d93f3d.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/06/13/5003e8b44f5740d68f2c868e04b04011.pdf"
+    }
+  },
+  {
+    "model": 5401,
+    "name": "NAVEE G5",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/09/25/ab332051c9d64c79881c573aa7c66463.bin",
+      "version": "2.0.5.2",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/12/04/e926cfa03d084bf695d6a8da1f46fa9e.bin",
+      "mcu_version": "0.0.0.5",
+      "bms_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/27/ecf82145ba514c9cab30e5add5df8e91.bin",
+      "bms_version": "3.0.0.5"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/07/10/46783a31bcdc47b890301d2244662f50.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/07/10/73ccb6a5556247e7ba4c28c7f26b7c2c.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/15/b16e48b6d4c24e949b439de37007ec89.pdf"
+    }
+  },
+  {
+    "model": 5301,
+    "name": "NAVEE XT5 Pro",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/11/10/fb68ea9ab55f4358bced1090b6d03622.bin",
+      "version": "2.0.2.8",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/10/e25c25af3f5445caa7c3c58224745dfb.bin",
+      "mcu_version": "0.0.1.0"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/08/19/63e05cbdd7c348cabb2924f9a70d7f72.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/08/19/a03a6cea89654930bb6772eb3320a37f.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/10/20/e5583f55f31f442488dda058b5576153.pdf"
+    }
+  },
+  {
+    "model": 5201,
+    "name": "NAVEE K100",
+    "firmware": {
+      "changeLog": "Optimize the SOC transition after upgrading during charging and optimize the static current sampling",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/11/24/bff45a95ee41452b843a4d0cbdd65146.bin",
+      "version": "0.0.1.2",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/23/1bf40729b98f4cb3903baed37fc02b00.bin",
+      "mcu_version": "0.0.3.2"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/07/08/725659fa74b745b0ac04f9151cf891b6.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/07/08/f0f59c5d755b4744b670caba0e3c8df9.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/15/b2f6485ce6d2450297928435a9fea207.pdf"
+    }
+  },
+  {
+    "model": 5101,
+    "name": "NAVEE K100 Pro",
+    "firmware": {
+      "changeLog": "Optimize the SOC transition after upgrading during charging and optimize the static current sampling",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/11/24/0e2ebccc8432435b88a7084b1606a5ab.bin",
+      "version": "0.0.1.2",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/10/1bb10dd7e5144f9e936d79a4bc6a3ef0.bin",
+      "mcu_version": "0.0.3.2"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/07/08/629445ce8b7446699102a61c762a6592.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/07/08/91d463ffbac04d3cb7826c94e7cb5bcf.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/15/b671ae9c888a41c883649901a0e7e135.pdf"
+    }
+  },
+  {
+    "model": 5001,
+    "name": "NAVEE K100 Max",
+    "firmware": {
+      "changeLog": "Optimize the problems of inaccurate SOC battery level detection and static current sampling",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/11/19/8084274491504301adff7cda1fb98e59.bin",
+      "version": "0.0.1.2",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/09/30/f1af25b72e0841a596c9e1586d9182ea.bin",
+      "mcu_version": "0.0.3.3"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/07/08/dfb69958035748e8822919e1137091a5.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/07/08/d6745e0f5d144ff6a017733bb105f805.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/15/3ed8fa5f4c39445dab05ae75d88727c1.pdf"
+    }
+  },
+  {
+    "model": 4801,
+    "name": "NAVEE Birdie 3",
+    "firmware": {
+      "changeLog": "Optimize the user experience of the implementation mode",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/31/be8f842f15854e69b2397529d0b5a7c4.bin",
+      "version": "2.0.1.2",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/31/9906e936689a4cd2b8ccc93db22d00e6.bin",
+      "mcu_version": "0.0.2.8"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/04/27/516e80ef39814f1cb39a07ffb53b4e20.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/04/27/425966bd1af6477887ac5859d8e578e0.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/06/13/53212ddbbde4416fa4f1cc8a89e0ada6.pdf"
+    }
+  },
+  {
+    "model": 4501,
+    "name": "NAVEE V50i Pro II",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/04/02/421482cec26644bcb8eaada487effc14.bin",
+      "version": "2.0.0.8"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/03/05/59797a8b024d4a86b939936ce2e141a2.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/03/05/351595413d954c0ab6761f9af2e2998f.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/16/9573f0b3dbb74624b57c9876516beadf.pdf"
+    }
+  },
+  {
+    "model": 4401,
+    "name": "NAVEE V40i Pro II",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/04/02/c43dd63e791c4f2897878d35ce0192b9.bin",
+      "version": "2.0.0.8",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/03/31/5a4a17e49d89472f88e514feb2d592c2.bin",
+      "mcu_version": "0.0.0.2"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/07/21/7749d4b5fb8241efa098c11774df5156.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/07/21/db85e96b9a2745c1a6e9e0f3d214fc75.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/16/444fdcb29cee4c97b4a02892d14f4fa8.pdf"
+    }
+  },
+  {
+    "model": 4301,
+    "name": "NAVEE V25i Pro II",
+    "firmware": {
+      "changeLog": "\u589e\u52a0\u4e2d\u89c4",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/04/08/0d496a6e54704d2ea98a00d2b1ad7992.bin",
+      "version": "2.0.0.8"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/03/04/86e0d3c34b6b48bdab2d93018df35017.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2025/03/04/c30f153e501541a790d874f8f5dd6314.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/09/16/981b2cf956ba4b1fa5f5c6cc8a8536ae.pdf"
+    }
+  },
+  {
+    "model": 4201,
+    "name": "NAVEE V3 Pro",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2024/12/03/9c6102e4ec384941983914703c112a1f.bin",
+      "version": "2.0.0.1",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2024/12/04/78a895dd0c984a81871bbd604ca06bc6.bin",
+      "mcu_version": "0.0.2.0"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2024/12/03/848b6c95c129496f8dbefc338c9d2ad5.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2024/12/03/27965e9e5ad84e0396709b0738c7719e.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2024/12/03/8479da3a501b4f4fa0bc7445ac5dace0.pdf"
+    }
+  },
+  {
+    "model": 4101,
+    "name": "NAVEE E25",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2024/11/27/3775b85577e747879a33cb3d35efc6c6.bin",
+      "version": "2.0.0.5",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2024/11/27/dd052697b8974bb1a698e3c064179385.bin",
+      "mcu_version": "0.0.0.6"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2024/12/19/b08fabc8746948de9a16c179f29f01b3.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2024/12/19/647583b58b9b4b79ab0cb56f671b65c1.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/03/03/c964140850614045a78d5b0a0d3e33e1.pdf"
+    }
+  },
+  {
+    "model": 4001,
+    "name": "NAVEE E20",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2024/11/27/6d1e4bc9556c48859611ba85232efc21.bin",
+      "version": "2.0.0.5",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2024/11/27/dfebc887d0c74757a8618ec16de1131e.bin",
+      "mcu_version": "0.0.0.6"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2024/12/19/6ef8999bc85d44298e8bda83fb47e2eb.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2024/12/19/69c35a0641c1490580f69ed7eb161422.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2025/03/03/038a00bd51cf45eaa1fa32f38da94cbe.pdf"
+    }
+  },
+  {
+    "model": 3801,
+    "name": "NAVEE ST3 PRO",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/12/12/f707bb8837044fdc9e2c604483977b5b.bin",
+      "version": "2.0.3.1",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/09/01/a0692ba787074c208c3530f45af516ab.bin",
+      "mcu_version": "0.0.1.5",
+      "bms_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/24/0a47df2acdc8419a8db1ff78af3bfeea.bin",
+      "bms_version": "1.0.0.4"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/08/13/4631638d553848f9b5ab78f6e9a617d6.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2024/09/24/4afa27a93aab4ff488cfacc414363660.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2024/12/20/8608571cdcd44497be3637fe7a35bb2f.pdf"
+    }
+  },
+  {
+    "model": 3701,
+    "name": "NAVEE ST3",
+    "firmware": {
+      "changeLog": "1. Optimize speed experience;\n2. Fix known issues.",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/12/12/5f17310a55f34938ba8cac18b0cdec05.bin",
+      "version": "2.0.3.1",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/09/01/f45e6237f7e24d3ab88efd038632f919.bin",
+      "mcu_version": "0.0.1.1"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/08/13/f732ac3892484394b3e807a263ba6e90.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2024/09/24/f860f82cffc84b5b8fcffee3be15a72b.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2024/12/20/f27b7708c5054729b623a65bb9508842.pdf"
+    }
+  },
+  {
+    "model": 3601,
+    "name": "NAVEE GT3 Max",
+    "firmware": {
+      "changeLog": "",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/12/12/0841b15d3e214ba0bf80849d5ac5a460.bin",
+      "version": "2.0.3.1",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/09/01/07f3246ce4854df7a0799495969c6795.bin",
+      "mcu_version": "0.0.1.1",
+      "bms_safe_url": "https://myusnavee.s3.amazonaws.com/2025/10/24/695907cdf9c04812baba3c93056a1af3.bin",
+      "bms_version": "1.0.0.4"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/08/13/0945a633db6d4588be2e6f7383fc0e03.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2024/09/24/70f63bfdd752489dad29abcb9f820b55.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2024/12/20/992a5a5c31dd4e7b938d58cc6a03e191.pdf"
+    }
+  },
+  {
+    "model": 3501,
+    "name": "NAVEE GT3",
+    "firmware": {
+      "changeLog": "1. Optimize speed experience;\n2. Fix known issues.",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/12/12/f01cdef227474d24951b45f9d714d64e.bin",
+      "version": "2.0.3.1",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/09/01/c17f7c77c4c245dabec9d00bced37717.bin",
+      "mcu_version": "0.0.1.1"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/08/13/4faafbf8d76642dd9f9433d98ae80aba.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2024/09/24/f3a8604a8068403b9f33f76af7299f50.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2024/12/20/7959b6332a834095b13fea502099a746.pdf"
+    }
+  },
+  {
+    "model": 3401,
+    "name": "NAVEE GT3 Pro",
+    "firmware": {
+      "changeLog": "1. Optimize speed experience;\n2. Fix known issues.",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2025/12/12/2e0fb8f7b1e349b199a723d5e89e20af.bin",
+      "version": "2.0.3.1",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2025/09/01/3342bc959b094bdcbf1ea6dc20c52f32.bin",
+      "mcu_version": "0.0.1.1"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2025/08/13/a8edad9dbf9e4e8e97b916adc694cbb7.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2024/09/24/667468ef2fbb466c87b8b7c75c00b752.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2024/12/20/4b694eb35d7b407aa4dd13ea69c8ada1.pdf"
+    }
+  },
+  {
+    "model": 2501,
+    "name": "NAVEE S60 (2501)",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2024/05/10/19d699bf7c544e42b7a9bdc3e98c1986.bin",
+      "version": "1.0.1.0",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2024/02/21/991f3ba1f03446eaa3d62ad4a5311716.bin",
+      "mcu_version": "0.0.0.6"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2024/01/24/79257b2a6e9143f09c99959287416331.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2024/01/24/5e20deb6def64fbabff5c47b5e5630f9.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2024/01/24/11b3a77c72224524b510197bcb54dacf.pdf"
+    }
+  },
+  {
+    "model": 1601,
+    "name": "NAVEE S40",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2024/05/10/ccab906ba09947ff896f724c59eb9449.bin",
+      "version": "1.0.1.0",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2024/02/21/f05dd98bf8fb45aa8eb832e13484561f.bin",
+      "mcu_version": "0.0.0.5"
+    },
+    "extra": {
+      "imageMin": "https://lj.naveetech.com/upload/2023/08/30/80bda85276444506a5d7b92069438784.png",
+      "imageMax": "https://lj.naveetech.com/upload/2023/08/30/60dafe0d9aa34c15ada36e869338f5e3.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2024/02/21/d31acc86b8704304b353a6f5556fc2ad.pdf"
+    }
+  },
+  {
+    "model": 1301,
+    "name": "NAVEE V40i/V40i  Pro",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2024/02/26/20915c0b19b84ba99af8903eeac0e701.bin",
+      "version": "0.0.0.6",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2024/02/21/dec2237b2b624fee99086ff9dee4d5be.bin",
+      "mcu_version": "0.0.0.8"
+    },
+    "extra": {
+      "imageMin": "https://lj.naveetech.com/upload/2023/08/17/34f464b5a1b34ff3a8f42176c8b3d175.png",
+      "imageMax": "https://lj.naveetech.com/upload/2023/08/17/c4e9bdaa012449688731561ae7100e80.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2023/11/29/2bdc6b8b335f4b46b15d4af70ab4f84b.pdf"
+    }
+  },
+  {
+    "model": 1291,
+    "name": "NAVEE V50i  Pro (1291)",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2024/06/21/66fc2479c82841a9b66d6bcf3e6507f9.bin",
+      "version": "2.0.0.8"
+    },
+    "extra": {
+      "imageMin": "https://lj.naveetech.com/upload/2023/08/17/4808303814474138a1ed016298496f46.png",
+      "imageMax": "https://lj.naveetech.com/upload/2023/08/17/95569c0ba2eb4ab287722db966b1b17c.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2023/11/29/d878238e0d9a4ec4870edf7c3c2c8888.pdf"
+    }
+  },
+  {
+    "model": 1201,
+    "name": "NAVEE V50i  Pro (1201)",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2024/01/05/31e131425b204406bb10fb125bf8a6a1.bin",
+      "version": "0.0.0.6",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2024/01/29/dad1c2691b1144218e8d5864d3a1610a.bin",
+      "mcu_version": "0.0.0.7"
+    },
+    "extra": {
+      "imageMin": "https://lj.naveetech.com/upload/2023/08/17/4808303814474138a1ed016298496f46.png",
+      "imageMax": "https://lj.naveetech.com/upload/2023/08/17/95569c0ba2eb4ab287722db966b1b17c.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2023/11/29/d878238e0d9a4ec4870edf7c3c2c8888.pdf"
+    }
+  },
+  {
+    "model": 1101,
+    "name": "NAVEE N65i",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2024/02/26/c3dd6f8a80b94bc1a1c50d4ec7e3e99c.bin",
+      "version": "0.0.0.5",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2024/02/21/7bcd756aa5be49a49d7cd0ca1966c523.bin",
+      "mcu_version": "0.0.1.1",
+      "bms_safe_url": "https://myusnavee.s3.amazonaws.com/2023/12/19/3792d8846e01406e8bf92b5a81915fc2.bin",
+      "bms_version": "0.1.0.7"
+    },
+    "extra": {
+      "imageMin": "https://lj.naveetech.com/upload/2023/08/17/36ebf21f74f245419a831d175553dc94.png",
+      "imageMax": "https://lj.naveetech.com/upload/2023/08/17/4af453a0e10947479ce068df1327aa30.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2023/11/29/91f7ccbe434a40d99442a880f6abb24e.pdf"
+    }
+  },
+  {
+    "model": 701,
+    "name": "NAVEE V25/V25i (701)",
+    "firmware": {
+      "changeLog": "null",
+      "safe_url": "https://myusnavee.s3.amazonaws.com/2024/02/26/a01d2028b5d94b7282521705dc2daaa0.bin",
+      "version": "0.0.0.6",
+      "mcu_safe_url": "https://myusnavee.s3.amazonaws.com/2024/02/21/1732f3e3d9e64962981cfa1433e1baba.bin",
+      "mcu_version": "0.0.0.9"
+    },
+    "extra": {
+      "imageMin": "https://myusnavee.s3.amazonaws.com/2024/02/23/c173af47e5604476aa95d1627a2a04ef.png",
+      "imageMax": "https://myusnavee.s3.amazonaws.com/2024/02/23/b7ca40de4c2547a3b6fa9497addce8be.png",
+      "manual": "https://myusnavee.s3.amazonaws.com/2023/11/29/f60cbd2f59a84527bca2e2d9581d384f.pdf"
+    }
+  }
+]
